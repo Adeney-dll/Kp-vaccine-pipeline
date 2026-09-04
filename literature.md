@@ -15,4 +15,6 @@ Choice confirmed, project will target the Peptidoglycan-Associated Lipoprotein (
 3 articles were used in selecting which protein candidate to use within this project; the main virulent factors of the chosen *Klebsiella pneumoniae* organism (the hypervirulent strain) include the capsule, lipopolysaccharide, fimbriae, and siderophores. For the project, the outer membrane proteins, OmpA. LppA, & Pal, were highlighted, with the Pal protein being the target for the project.
 
 Protein search on NCBI produced over 17,000 results
-Targeting only sequences within 170 to 180 aa proteins
+Targeting only sequences within 170 to 185 aa proteins -- 10 protein sequences retrieved.
+
+Consensus sequence will be obtained via MEGA 12 
