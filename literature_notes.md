@@ -19,3 +19,8 @@ Targeting only sequences within 170 to 185 aa proteins -- 10 protein sequences r
 
 Consensus sequence will be obtained via MEGA 12 
 All 10 protein sequences were aligned using the MUSCLE algorithm on MEGA 12 with base settings, the consensus sequence was retrieved and placed with raw data.
+
+### Design stage 1
+#### GUI tools
+1.1 PSORTb: An open source bioinformatics tool that predicts the Subcellular Localization (SCL) of bacterial proteins. It is generally useful for prokaryotes, more advanced cells like in Humans or animals or the ones like malaria can't be analyzed here.
+     It reads the amino acids file provided and predicts where on the cell it should be, it is useful in making sure a target protein is exactly where it is needed to be before other analysis can begin.
