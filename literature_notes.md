@@ -18,3 +18,4 @@ Protein search on NCBI produced over 73,000 results
 Targeting only sequences within 170 to 185 aa proteins -- 10 protein sequences retrieved.
 
 Consensus sequence will be obtained via MEGA 12 
+All 10 protein sequences were aligned using the MUSCLE algorithm on MEGA 12 with base settings, the consensus sequence was retrieved and placed with raw data.
