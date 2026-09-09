@@ -25,11 +25,13 @@ All 10 protein sequences were aligned using the MUSCLE algorithm on MEGA 12 with
 1.1 PSORTb v3.0.3: An open source bioinformatics tool that predicts the Subcellular Localization (SCL) of bacterial proteins. It is generally useful for prokaryotes, more advanced cells like in Humans or animals or the ones like malaria can't be analyzed here.
      It reads the amino acids file provided and predicts where on the cell it should be, it is useful in making sure a target protein is exactly where it is needed to be before other analysis can begin.
      PSORTb scores scores potential locations on a scale from 0 to 10. A score of **10.00** on _Outer Membrane_ means the algorithm has maximum confidence that this protein resides on the exterior surface of the cell.
+     Accepts sequence in fasta format, image result in result_images.
 PSORTb scored the consensus sequence a perfect 10, with other components at 0. This validates the sequence is an outer membrane protein.
 
 <!--PSORTb Reference (Yu *et al*., 2010)
     Yu, N. Y., Wagner, J. R., Laird, M. R., Melli, G., Rey, S., Lo, R., Dao, P., Sahinalp, S. C., Ester, M., Foster, L. J., & Brinkman, F. S. L. (2010). PSORTb 3.0: improved protein subcellular localization prediction with refined localization subcategories and predictive capabilities for all prokaryotes. _Bioinformatics_, _26_(13), 1608–1615. https://doi.org/10.1093/bioinformatics/btq249-->
 
-1.2 SignalP: An advanced machine learning algorithm that reads a sequence and predicts the presence of a signal peptide, if present, then details the type and cleavage site. 
+1.2 SignalP v6.0: An advanced machine learning algorithm that reads a sequence and predicts the presence of a signal peptide, if present, then details the type and cleavage site. 
     In a cell, proteins have different places to be upon production, a signal peptide is attached and helps direct the protein to its site then it gets removed. 
 This tool will function as a validation for Psortb, in that, if a signal peptide is identified for this sequence, it shows the protein is actively an outer membrane type that gets transported there and also it helps eliminate the possible of designing a redundant vaccine targeting a region of the sequence not present in the pathogen within a patient.
+
