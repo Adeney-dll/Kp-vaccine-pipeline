@@ -38,7 +38,10 @@ SignalP result -- Lipoprotein signal peptide (Sec/SPII) present
              There is a deliberate transporting mechanism for the sequence from the cytoplasm to the outer membrane area, protein is definitely confirmed as an outer membrane protein. 
 Cleavage site -- Cleavage site between pos. 21 and 22. 
             Amino acids from 1 to 21 cut off, 22 onwards remains within/upon the cell 
-            Probability 0.993814 (over 99% certainty)
+            Probability 0.993814 (over 99% confidence)
 
 <!--SignalP Reference (Nielsen et al., 2024)
     Nielsen, H., Teufel, F., Brunak, S., & Von Heijne, G. (2024). SignalP: The Evolution of a Web Server. In _Methods in molecular biology_ (Vol. 2836, pp. 331–367). https://doi.org/10.1007/978-1-0716-4007-4_17-->
+
+#### Noting
+Consensus sequence will now be trimmed from it's original 174 amino acid length to 153.
