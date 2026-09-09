@@ -45,3 +45,4 @@ Cleavage site -- Cleavage site between pos. 21 and 22.
 
 #### Noting
 Consensus sequence will now be trimmed from it's original 174 amino acid length to 153.
+Trimming was achieved using a short python script. Mature sequence will be used for all future analysis.
