@@ -33,5 +33,9 @@ PSORTb scored the consensus sequence a perfect 10, with other components at 0. T
 
 1.2 SignalP v6.0: An advanced machine learning algorithm that reads a sequence and predicts the presence of a signal peptide, if present, then details the type and cleavage site. 
     In a cell, proteins have different places to be upon production, a signal peptide is attached and helps direct the protein to its site then it gets removed. 
-This tool will function as a validation for Psortb, in that, if a signal peptide is identified for this sequence, it shows the protein is actively an outer membrane type that gets transported there and also it helps eliminate the possible of designing a redundant vaccine targeting a region of the sequence not present in the pathogen within a patient.
+    This tool will function as a validation for Psortb, in that, if a signal peptide is identified for this sequence, it shows the protein is actively an outer membrane type that gets transported there and also it helps eliminate the possibility of designing a redundant vaccine targeting a region of the sequence not present in the pathogen within a patient. By identifying the cleavage site within the protein, it will be easy to slice that section and target the parts that actively remain on the cell and within a patient.
+SignalP result --
+Cleavage site --
 
+<!--SignalP Reference (Nielsen et al., 2024)
+    Nielsen, H., Teufel, F., Brunak, S., & Von Heijne, G. (2024). SignalP: The Evolution of a Web Server. In _Methods in molecular biology_ (Vol. 2836, pp. 331–367). https://doi.org/10.1007/978-1-0716-4007-4_17-->
