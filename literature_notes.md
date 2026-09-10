@@ -50,4 +50,11 @@ Trimming was achieved using a short python script. Mature sequence will be used 
 ### Design stage 2
 #### Epitope Prediction
 2.1 The Immune Epitope Database (IEDB) B-cell Prediction Tool on the Next-Generation tool site: IEDB stands as one of the leading platforms for genome analysis, using Bepipred v3.0 prediction method, the platform identifies epitopes or series of peptides able to elicit the reaction of human B-cells.
-     Residue table, Epitope table and prediction graph were retrieved
+Residue table, Epitope table and prediction graph were retrieved
+
+<!--B-cell reference (Yan *et al*., 2024) General referencing
+     Yan, Z., Kim, K., Kim, H., Ha, B., Gambiez, A., Bennett, J., De Almeida Mendes, M. F., Trevizani, R., Mahita, J., Richardson, E., Marrama, D., Blazeska, N., Koşaloğlu-Yalçın, Z., Nielsen, M., Sette, A., Peters, B., & Greenbaum, J. A. (2024). Next-generation IEDB tools: a platform for epitope prediction and analysis. _Nucleic Acids Research_, _52_(W1), W526–W532. https://doi.org/10.1093/nar/gkae407
+     
+     (Clifford et al., 2022) Bepipred 3.0 reference
+     Clifford, J. N., Høie, M. H., Deleuran, S., Peters, B., Nielsen, M., & Marcatili, P. (2022). BepiPred ‐3.0: Improved B‐cell epitope prediction using protein language models. _Protein Science_, _31_(12), e4497. https://doi.org/10.1002/pro.4497-->
+
