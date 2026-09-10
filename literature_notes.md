@@ -49,4 +49,5 @@ Trimming was achieved using a short python script. Mature sequence will be used 
 
 ### Design stage 2
 #### Epitope Prediction
-2.1 IEDB B-cell Prediction Tool on the Next-Generation tool site: 
+2.1 The Immune Epitope Database (IEDB) B-cell Prediction Tool on the Next-Generation tool site: IEDB stands as one of the leading platforms for genome analysis, using Bepipred v3.0 prediction method, the platform identifies epitopes or series of peptides able to elicit the reaction of human B-cells.
+     Residue table, Epitope table and prediction graph were retrieved

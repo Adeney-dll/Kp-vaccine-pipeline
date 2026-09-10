@@ -1,0 +1,5 @@
+seq #,start,end,peptide source,peptide,peptide length,bepipred3 score
+1,4,45,bepipred-3.0,NKNASNDQSGEGMLGAGTGMDANGNGGNMSSEEQARLQMQQL,42,0.224
+1,58,62,bepipred-3.0,YDIRS,5,0.154
+1,93,98,bepipred-3.0,GTPEYN,6,0.173
+1,134,144,bepipred-3.0,AVLGHDEAAYA,11,0.188
