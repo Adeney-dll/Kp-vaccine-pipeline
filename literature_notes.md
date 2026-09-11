@@ -60,3 +60,6 @@ Residue table, Epitope table and prediction graph were retrieved, parameters wer
 
 2.1.1 IEDB MHC-1 prediction for T-cells: The IEDB platform also aids T-cell epitope prediction. Using the NetMHCpan EL 4.1 algorithm; an advanced machine-learning algorithm powered by artificial neural networks that predicts how strongly a peptide fragment will interact with an MHC Class I molecule.
      All defaults were kept and 27 Human alleles selected for prediction.
+
+<!--T-cell MHC-1 reference (Reynisson *et al*., 2020)
+     Reynisson, B., Alvarez, B., Paul, S., Peters, B., & Nielsen, M. (2020). NetMHCpan-4.1 and NetMHCIIpan-4.0: improved predictions of MHC antigen presentation by concurrent motif deconvolution and integration of MS MHC eluted ligand data. _Nucleic Acids Research_, _48_(W1), W449–W454. https://doi.org/10.1093/nar/gkaa379-->
