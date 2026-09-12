@@ -61,8 +61,11 @@ Residue table, Epitope table and prediction graph were retrieved, parameters wer
 2.1.1 IEDB MHC-I prediction for T-cells: The IEDB platform also aids T-cell epitope prediction. Using the NetMHCpan EL 4.1 algorithm; an advanced machine-learning algorithm powered by artificial neural networks that predicts how strongly a peptide fragment will interact with an MHC Class I molecule.
      All defaults were kept and 27 Human alleles selected for prediction.
 
-<!--T-cell MHC-1 reference (Reynisson *et al*., 2020)
+<!--T-cell MHC-I reference (Reynisson *et al*., 2020)
      Reynisson, B., Alvarez, B., Paul, S., Peters, B., & Nielsen, M. (2020). NetMHCpan-4.1 and NetMHCIIpan-4.0: improved predictions of MHC antigen presentation by concurrent motif deconvolution and integration of MS MHC eluted ligand data. _Nucleic Acids Research_, _48_(W1), W449–W454. https://doi.org/10.1093/nar/gkaa379-->
 
 2.1.2  IEDB MHC-II prediction for T-cells: Using the NetMHCIIpan EL 4.1 algorithm; an advanced machine-learning algorithm powered by artificial neural networks that predicts how strongly a peptide fragment will interact with an MHC Class II molecule.
      All defaults were kept and 27 Human alleles selected for prediction.
+
+<!--T-cell MHC-II reference  (Kaabinejadian *et al*., 2022)
+     Kaabinejadian, S., Barra, C., Alvarez, B., Yari, H., Hildebrand, W. H., & Nielsen, M. (2022). Accurate MHC motif deconvolution of immunopeptidomics data reveals a significant contribution of DRB3, 4 and 5 to the total DR immunopeptidome. _Frontiers in Immunology_, _13_, 835454. https://doi.org/10.3389/fimmu.2022.835454-->
