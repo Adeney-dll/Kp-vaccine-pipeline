@@ -58,14 +58,21 @@ Residue table, Epitope table and prediction graph were retrieved, parameters wer
      (Clifford et al., 2022) Bepipred 3.0 reference
      Clifford, J. N., Høie, M. H., Deleuran, S., Peters, B., Nielsen, M., & Marcatili, P. (2022). BepiPred ‐3.0: Improved B‐cell epitope prediction using protein language models. _Protein Science_, _31_(12), e4497. https://doi.org/10.1002/pro.4497-->
 
-2.1.1 IEDB MHC-I prediction for T-cells: The IEDB platform also aids T-cell epitope prediction. Using the NetMHCpan EL 4.1 algorithm; an advanced machine-learning algorithm powered by artificial neural networks that predicts how strongly a peptide fragment will interact with an MHC Class I molecule.
+2.2 IEDB MHC-I prediction for T-cells: The IEDB platform also aids T-cell epitope prediction. Using the NetMHCpan EL 4.1 algorithm; an advanced machine-learning algorithm powered by artificial neural networks that predicts how strongly a peptide fragment will interact with an MHC Class I molecule.
      All defaults were kept and 27 Human alleles selected for prediction.
 
 <!--T-cell MHC-I reference (Reynisson *et al*., 2020)
      Reynisson, B., Alvarez, B., Paul, S., Peters, B., & Nielsen, M. (2020). NetMHCpan-4.1 and NetMHCIIpan-4.0: improved predictions of MHC antigen presentation by concurrent motif deconvolution and integration of MS MHC eluted ligand data. _Nucleic Acids Research_, _48_(W1), W449–W454. https://doi.org/10.1093/nar/gkaa379-->
 
-2.1.2  IEDB MHC-II prediction for T-cells: Using the NetMHCIIpan EL 4.1 algorithm; an advanced machine-learning algorithm powered by artificial neural networks that predicts how strongly a peptide fragment will interact with an MHC Class II molecule.
+2.3  IEDB MHC-II prediction for T-cells: Using the NetMHCIIpan EL 4.1 algorithm; an advanced machine-learning algorithm powered by artificial neural networks that predicts how strongly a peptide fragment will interact with an MHC Class II molecule.
      All defaults were kept and 27 Human alleles selected for prediction.
 
 <!--T-cell MHC-II reference  (Kaabinejadian *et al*., 2022)
      Kaabinejadian, S., Barra, C., Alvarez, B., Yari, H., Hildebrand, W. H., & Nielsen, M. (2022). Accurate MHC motif deconvolution of immunopeptidomics data reveals a significant contribution of DRB3, 4 and 5 to the total DR immunopeptidome. _Frontiers in Immunology_, _13_, 835454. https://doi.org/10.3389/fimmu.2022.835454-->
+
+#### Noting
+B and T cell epitopes have been derived and will undergo antigenicity, toxicity, and allergenicity predictions. Only epitopes with a clear antigen score, non toxin, and non allergen will be kept and utilized.
+
+### Design stage 3
+Immunogenic filtering
+3.1 All epitopes will be filtered to obtain the top binders from the large datasets. These top binders will be subjected to the immunogenic filtering. Top binder acquisition will be achieved using Python scripting.
