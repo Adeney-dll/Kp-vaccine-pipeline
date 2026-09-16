@@ -14,3 +14,4 @@ def top_binders():
 
 if __name__ == "__main__":
     top_binders()
+#This code uses the absolute path within the system to locate the files, this runs a lot smoothly on my system and is a bit straightfoward.

@@ -76,3 +76,5 @@ B and T cell epitopes have been derived and will undergo antigenicity, toxicity,
 ### Design stage 3
 Immunogenic filtering
 3.1 All epitopes will be filtered to obtain the top binders from the large datasets. These top binders will be subjected to the immunogenic filtering. Top binder acquisition will be achieved using Python scripting.
+     The filtering of MHC-I epitopes yielded 37 top binding candidates from a dataset of over 3,900 predicted epitopes.
+     <!--The scripting was quite a process; in all, several ways to locate and run files within the system or without were analyzed.
