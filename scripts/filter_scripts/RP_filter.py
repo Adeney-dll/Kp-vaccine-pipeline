@@ -15,3 +15,4 @@ def top_binders():
 
 if __name__ == "__main__":
     top_binders()
+## This program uses relative path to locate the files and is dependent on the git terminal for running
