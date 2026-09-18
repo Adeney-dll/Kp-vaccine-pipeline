@@ -80,3 +80,5 @@ Immunogenic filtering
      <!--The scripting was quite a process; in all, several ways to locate and run files within the system or without were analyzed. The scripting file now contains a sub-file for the filtering scripts; one dealing with a more complex code and execution pathway [RP filter] and the other with a relatively simpler one [AP filter], in my opinion.-->
      The filtering of MHC-II epitopes yielded 21 top binding candidates from a dataset of over 756 predicted epitopes.
 Top binding candidates were compiled and placed within the refined epitope value sub data file and will undergo immunological testing.
+
+3.2 Top binders will be manually run through vaxijen predictive software for qualities needed.
