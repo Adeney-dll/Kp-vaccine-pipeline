@@ -1,0 +1,10 @@
+peptide,antigenicity,toxicity,allergenicity
+"NKNASNDQSGEGMLGAGTGMDANGNGGNMSSEEQARLQMQQL			","Probable antigen.
+Score: 1.6094789648049925
+
+",Non-Toxin,Probable NON-ALLERGEN
+"YDIRS			",NO DATA,NO DATA,NO DATA
+"GTPEYN			","Probable non-antigen.
+Score: -0.005151222505000164",Non-Toxin,Probable ALLERGEN
+"AVLGHDEAAYA			","Probable non-antigen.
+Score: 0.18678482936833332",Non-Toxin,Probable ALLERGEN

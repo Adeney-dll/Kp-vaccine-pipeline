@@ -82,3 +82,7 @@ Immunogenic filtering
 Top binding candidates were compiled and placed within the refined epitope value sub data file and will undergo immunological testing.
 
 3.2 Top binders will be manually run through vaxijen predictive software for qualities needed.
+     Antigenicity was predicted using Vaxijen v2.1 with threshold at 0.3. Epitopes below 6 amino acids were deemed to short to produce viable results.
+         <!--(Doytchinova & Flower, 2007)
+         Doytchinova, I. A., & Flower, D. R. (2007). VaxiJen: a server for prediction of protective antigens, tumour antigens and subunit vaccines. _BMC Bioinformatics_, _8_(1), 4. https://doi.org/10.1186/1471-2105-8-4-->
+    D
