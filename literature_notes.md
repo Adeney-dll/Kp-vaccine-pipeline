@@ -82,7 +82,12 @@ Immunogenic filtering
 Top binding candidates were compiled and placed within the refined epitope value sub data file and will undergo immunological testing.
 
 3.2 Top binders will be manually run through vaxijen predictive software for qualities needed.
-     Antigenicity was predicted using Vaxijen v2.1 with threshold at 0.3. Epitopes below 6 amino acids were deemed to short to produce viable results. It evaluates whether a sequence can actually provoke the immune system to produce antibodies.
+     Antigenicity was predicted using Vaxijen v2.1 with threshold at 0.3. Epitopes below 6 amino acids were deemed to short to produce viable results. It evaluates whether a sequence can actually provoke the immune system to produce antibodies. 
          <!--(Doytchinova & Flower, 2007)
          Doytchinova, I. A., & Flower, D. R. (2007). VaxiJen: a server for prediction of protective antigens, tumour antigens and subunit vaccines. _BMC Bioinformatics_, _8_(1), 4. https://doi.org/10.1186/1471-2105-8-4-->
-    n
+    Toxicity was predicted using ToxinPred 3.0
+         <!--(Rathore et al., 2024)
+         Rathore, A. S., Choudhury, S., Arora, A., Tijare, P., & Raghava, G. P. (2024). ToxinPred 3.0: An improved method for predicting the toxicity of peptides. _Computers in Biology and Medicine_, _179_, 108926. https://doi.org/10.1016/j.compbiomed.2024.108926-->
+    Allergenicity was predicted using AlgPred 2.0
+         <!--(Sharma et al., 2020)
+         Sharma, N., Patiyal, S., Dhall, A., Pande, A., Arora, C., & Raghava, G. P. S. (2020). AlgPred 2.0: an improved method for predicting allergenic proteins and mapping of IgE epitopes. _Briefings in Bioinformatics_, _22_(4). https://doi.org/10.1093/bib/bbaa294-->

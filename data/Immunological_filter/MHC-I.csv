@@ -1,0 +1,90 @@
+Peptide	antigenicity	toxicity	allergenicity
+YGKEKPAVL	"Probable non-antigen.
+Score: 0.06406289040785706
+"	Non-Toxin	Allergen
+YAKNRRAVL	"Probable non-antigen.
+Score: -0.613006930319762"	Non-Toxin	Allergen
+LQQNNIVYF	"Probable non-antigen.
+Score: -0.22554220452297635"	Non-Toxin	Non-Allergen
+EAAYAKNRR	"Probable antigen.
+Score: 0.42714604676726187"	Non-Toxin	Allergen
+SEEQARLQM	"Probable antigen.
+Score: 1.255157399065595"	Non-Toxin	Allergen
+MLDAHANFL	"Probable non-antigen.
+Score: 0.03242747261095247
+"	Non-Toxin	Non-Allergen
+AMLDAHANF	"Probable non-antigen.
+Score: 0.0678136608714286
+"	Non-Toxin	Allergen
+YLQGKGVSA	"Probable antigen.
+Score: 1.060128894779762"	Non-Toxin	Allergen
+QLQQNNIVY	"Probable antigen.
+Score: 0.30270302394571436
+"	Non-Toxin	Non-Allergen
+EYNIALGER	"Probable antigen.
+Score: 0.6845552027507142
+"	Non-Toxin	Allergen
+AVKMYLQGK	"Probable antigen.
+Score: 0.35296793978392854
+"	Toxin	Non-Allergen
+RANAVKMYL	"Probable antigen.
+Score: 0.8364241990336905"	Non-Toxin	Non-Allergen
+QARLQMQQL	"Probable antigen.
+Score: 0.8694409519973811
+"	Non-Toxin	Non-Allergen
+DIRSDFAAM	"Probable antigen.
+Score: 0.7881135742885714
+"	Non-Toxin	Allergen
+FLRSNPSYK	"Probable antigen.
+Score: 1.0275972835377383"	Non-Toxin	Allergen
+IVYFDLDKY	"Probable non-antigen.
+Score: 0.15553782136214317"	Non-Toxin	Non-Allergen
+KNRRAVLVY	"Probable non-antigen.
+Score: -0.15754206022940476"	Non-Toxin	Allergen
+KMYLQGKGV	"Probable non-antigen.
+Score: 0.22106874635047605"	Toxin	Non-Allergen
+SIVSYGKEK	"Probable non-antigen.
+Score: -0.7089907900685711"	Non-Toxin	Allergen
+ADQISIVSY	"Probable non-antigen.
+Score: 0.039444798610833165"	Non-Toxin	Allergen
+RRANAVKMY	"Probable antigen.
+Score: 0.8417089642551192"	Non-Toxin	Non-Allergen
+ADERGTPEY	"Probable antigen.
+Score: 1.3990564587946426"	Non-Toxin	Allergen
+QISIVSYGK	"Probable non-antigen.
+Score: -0.6551886467301188
+"	Non-Toxin	Allergen
+VLGHDEAAY	"Probable non-antigen.
+Score: 0.209181079667976"	Non-Toxin	Allergen
+TVEGHADER	"Probable antigen.
+Score: 1.9964550555158334"	Non-Toxin	Non-Allergen
+NFLRSNPSY	"Probable antigen.
+Score: 0.462160053749881"	Non-Toxin	Allergen
+VSADQISIV	"Probable antigen.
+Score: 0.5897175719752379
+"	Non-Toxin	Allergen
+MSSEEQARL	"Probable antigen.
+Score: 0.8817066588578572
+"	Non-Toxin	Allergen
+KEKPAVLGH	"Probable non-antigen.
+Score: 0.16452386987226186"	Non-Toxin	Allergen
+ALGERRANA	"Probable antigen.
+Score: 0.7544392486233332
+"	Non-Toxin	Allergen
+RSNPSYKVT	"Probable antigen.
+Score: 1.2904350161669051"	Non-Toxin	Allergen
+DANGNGGNM	"Probable antigen.
+Score: 3.1247283045648815"	Non-Toxin	Allergen
+GTPEYNIAL	"Probable antigen.
+Score: 1.1173078281122617"	Non-Toxin	Allergen
+SYGKEKPAV	"Probable antigen.
+Score: 0.6020198938998811
+"	Non-Toxin	Allergen
+AAYAKNRRA	"Probable non-antigen.
+Score: 0.28274026386261913
+"	Non-Toxin	Allergen
+YNIALGERR	"Probable antigen.
+Score: 0.5268387554635714
+"	Non-Toxin	Non-Allergen
+GMLGAGTGM	"Probable non-antigen.
+Score: -0.09185714022900798"	Non-Toxin	Allergen
