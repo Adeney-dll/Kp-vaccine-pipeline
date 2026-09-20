@@ -91,3 +91,8 @@ Top binding candidates were compiled and placed within the refined epitope value
     Allergenicity was predicted using AlgPred 2.0
          <!--(Sharma et al., 2020)
          Sharma, N., Patiyal, S., Dhall, A., Pande, A., Arora, C., & Raghava, G. P. S. (2020). AlgPred 2.0: an improved method for predicting allergenic proteins and mapping of IgE epitopes. _Briefings in Bioinformatics_, _22_(4). https://doi.org/10.1093/bib/bbaa294-->
+    Immunogenicity was predicted using vaxijen 2.0
+         <!--(Dimitrov et al., 2020)
+         Dimitrov, I., Zaharieva, N., & Doytchinova, I. (2020). Bacterial immunogenicity prediction by machine learning methods. _Vaccines_, _8_(4), 709. https://doi.org/10.3390/vaccines8040709-->
+#### NOTE:
+Vaxijen 2.1 restricts batch predictions behind a paywall and single analysis is limited to an undisclosed number of proteins (between 10 to 20 probably)
