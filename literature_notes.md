@@ -48,6 +48,7 @@ Consensus sequence will now be trimmed from it's original 174 amino acid length 
 Trimming was achieved using a short python script. Mature sequence will be used for all future analysis.
 
 ### Design stage 2
+**NOTE**: Mature Pal sequence probable antigen
 #### Epitope Prediction
 2.1 The Immune Epitope Database (IEDB) B-cell Prediction Tool on the Next-Generation tool site: IEDB stands as one of the leading platforms for genome analysis, using Bepipred v3.0 prediction method, the platform identifies epitopes or series of peptides able to elicit the reaction of human B-cells.
 Residue table, Epitope table and prediction graph were retrieved, parameters were kept at the default.
@@ -96,3 +97,5 @@ Top binding candidates were compiled and placed within the refined epitope value
          Dimitrov, I., Zaharieva, N., & Doytchinova, I. (2020). Bacterial immunogenicity prediction by machine learning methods. _Vaccines_, _8_(4), 709. https://doi.org/10.3390/vaccines8040709-->
 #### NOTE:
 Vaxijen 2.1 restricts batch predictions behind a paywall and single analysis is limited to an undisclosed number of proteins (between 10 to 20 probably)
+
+3.3 Final filtering will be obtained through script
