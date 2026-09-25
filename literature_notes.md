@@ -98,4 +98,6 @@ Top binding candidates were compiled and placed within the refined epitope value
 #### NOTE:
 Vaxijen 2.1 restricts batch predictions behind a paywall and single analysis is limited to an undisclosed number of proteins (between 10 to 20 probably)
 
-3.3 Final filtering will be obtained through script
+3.3 Final epitope filtering was achieved via python scripting:
+     mhci results produced 0 candidates out of 37 that passed all four criteria
+     
