@@ -99,5 +99,7 @@ Top binding candidates were compiled and placed within the refined epitope value
 Vaxijen 2.1 restricts batch predictions behind a paywall and single analysis is limited to an undisclosed number of proteins (between 10 to 20 probably)
 
 3.3 Final epitope filtering was achieved via python scripting:
-     mhci results produced 0 candidates out of 37 that passed all four criteria
-     
+     mhci results produced 0 candidates that passed all four criteria out of 37 top binders
+     mhcii results produced 5 candidates that passed all four criteria out of 21 top binders
+     b-cell results produced 1 candidate that passed all 3 criteria out of 4 top binders
+**Note**: Immunogenicity test will be reevaluated for b-cell candidate. 
