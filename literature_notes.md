@@ -102,4 +102,12 @@ Vaxijen 2.1 restricts batch predictions behind a paywall and single analysis is 
      mhci results produced 0 candidates that passed all four criteria out of 37 top binders
      mhcii results produced 5 candidates that passed all four criteria out of 21 top binders
      b-cell results produced 1 candidate that passed all 3 criteria out of 4 top binders
-**Note**: Immunogenicity test will be reevaluated for b-cell candidate. 
+
+
+### Design stage 4
+3D structure mapping
+4.1 Alphafold server: The 3 dimensional structure of the mature Pal outer membrane protein was visualized and confidence score recorded. 
+     <!--(Abramson et al., 2024)
+     Abramson, J., Adler, J., Dunger, J., Evans, R., Green, T., Pritzel, A., Ronneberger, O., Willmore, L., Ballard, A. J., Bambrick, J., Bodenstein, S. W., Evans, D. A., Hung, C., O’Neill, M., Reiman, D., Tunyasuvunakool, K., Wu, Z., Žemgulytė, A., Arvaniti, E., . . . Jumper, J. M. (2024). Accurate structure prediction of biomolecular interactions with AlphaFold 3. _Nature_, _630_(8016), 493–500. https://doi.org/10.1038/s41586-024-07487-w-->
+
+4.2 
