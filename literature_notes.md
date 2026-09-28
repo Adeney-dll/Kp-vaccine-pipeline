@@ -110,4 +110,10 @@ Vaxijen 2.1 restricts batch predictions behind a paywall and single analysis is 
      <!--(Abramson et al., 2024)
      Abramson, J., Adler, J., Dunger, J., Evans, R., Green, T., Pritzel, A., Ronneberger, O., Willmore, L., Ballard, A. J., Bambrick, J., Bodenstein, S. W., Evans, D. A., Hung, C., O’Neill, M., Reiman, D., Tunyasuvunakool, K., Wu, Z., Žemgulytė, A., Arvaniti, E., . . . Jumper, J. M. (2024). Accurate structure prediction of biomolecular interactions with AlphaFold 3. _Nature_, _630_(8016), 493–500. https://doi.org/10.1038/s41586-024-07487-w-->
 
-4.2 
+4.2 Epitope mapping has revealed overlaping regions between epitopes.
+     B-cell epitope - visible
+     mhcii-1 - visible, overshadowed by mhcii-4 and 5
+     mhcii-2 - visible
+     mhcii-3 - within B-cell epitope
+     mhcii-4 - visible
+     mhcii-5 - visible
