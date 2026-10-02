@@ -117,3 +117,4 @@ Vaxijen 2.1 restricts batch predictions behind a paywall and single analysis is 
      mhcii-3 - within B-cell epitope
      mhcii-4 - visible
      mhcii-5 - visible
+    MEV (Multi-Epitope vaccine) construction will be manual
