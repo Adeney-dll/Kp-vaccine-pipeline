@@ -117,4 +117,9 @@ Vaxijen 2.1 restricts batch predictions behind a paywall and single analysis is 
      mhcii-3 - within B-cell epitope
      mhcii-4 - visible
      mhcii-5 - visible
-    MEV (Multi-Epitope vaccine) construction will be manual
+MEV (Multi-Epitope vaccine) construction will be manual
+
+4.3 MEV design chain 
+[Adjuvant] + (EAAAK) + [PADRE] + (GPGPG) + [Epitopes] + (KK) + [His-Tag]
+Adjuvant -- Cholera enterotoxin subunit B and Human beta-defensin 2
+Two vaccine candidates will be constructed, one with each adjuvant. Raw adjuvant protein sequences have been obtained via NCBI and confirmation of signal peptides will be handled via SignalP
