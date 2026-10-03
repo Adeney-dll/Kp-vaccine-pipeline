@@ -1,5 +1,13 @@
 # Sequence trimming
-"""The consensus sequence has been validated to contain the Lipoprotein signal peptide (Sec/SPII) from aa 1 to aa 21, a trim must be initiated to derive the mature protein"""
+"""The consensus sequence has been validated to contain the Lipoprotein signal peptide (Sec/SPII) from aa 1 to aa 21, a trim must be initiated to derive the mature protein
 
 Conseq = "MQLNKVLKGLMIALPVMAIAACSSNKNASNDQSGEGMLGAGTGMDANGNGGNMSSEEQARLQMQQLQQNNIVYFDLDKYDIRSDFAAMLDAHANFLRSNPSYKVTVEGHADERGTPEYNIALGERRANAVKMYLQGKGVSADQISIVSYGKEKPAVLGHDEAAYAKNRRAVLVY"
-print (Conseq [21:])
+print (Conseq [21:])"""
+
+# Adjuvant 1 CTB
+CTBtrim = "MIKLKFGVFFTVLLSSAYAHGTPQNITDLCAEYHNTQIYTLNDKIFSYTESLAGKREMAIITFKNGAIFQVEVPGSQHIDSQKKAIERMKDTLRIAYLTEAKVEKLCVWNNKTPHAIAAISMAN"
+print (CTBtrim [21:])
+
+#Adjuvant 2 HBD-2
+HBDtrim ="MRVLYLLFSFLFIFLMPLPGVFGGIGDPVTCLKSGAICHPVFCPRRYKQIGTCGLPGTKCCKKP"
+print (HBDtrim [23:])

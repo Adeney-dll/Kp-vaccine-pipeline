@@ -123,3 +123,8 @@ MEV (Multi-Epitope vaccine) construction will be manual
 [Adjuvant] + (EAAAK) + [PADRE] + (GPGPG) + [Epitopes] + (KK) + [His-Tag]
 Adjuvant -- Cholera enterotoxin subunit B and Human beta-defensin 2
 Two vaccine candidates will be constructed, one with each adjuvant. Raw adjuvant protein sequences have been obtained via NCBI and confirmation of signal peptides will be handled via SignalP
+CTB result -- Signal peptide (Sec/SPI) present (0.999 likelihood)
+              Cleavage site between pos. 21 and 22. (cutting from aa 1 to 21)
+HBD-2 result -- Signal peptide (Sec/SPI) present (0.9997 likelihood)
+              Cleavage site between pos. 23 and 24. (cutting from aa 1 to 23)
+
