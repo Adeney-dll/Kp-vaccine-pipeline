@@ -120,11 +120,23 @@ Vaxijen 2.1 restricts batch predictions behind a paywall and single analysis is 
 MEV (Multi-Epitope vaccine) construction will be manual
 
 4.3 MEV design chain 
-[Adjuvant] + (EAAAK) + [PADRE] + (GPGPG) + [Epitopes] + (KK) + [His-Tag]
+[Adjuvant] - EAAAK - [MHC-II] - GPGPG - [B-cell] – HHHHHH
 Adjuvant -- Cholera enterotoxin subunit B and Human beta-defensin 2
 Two vaccine candidates will be constructed, one with each adjuvant. Raw adjuvant protein sequences have been obtained via NCBI and confirmation of signal peptides will be handled via SignalP
 CTB result -- Signal peptide (Sec/SPI) present (0.999 likelihood)
               Cleavage site between pos. 21 and 22. (cutting from aa 1 to 21)
 HBD-2 result -- Signal peptide (Sec/SPI) present (0.9997 likelihood)
               Cleavage site between pos. 23 and 24. (cutting from aa 1 to 23)
+
+### Design stage 5
+Vaccine candidates have been constructed and testing and validation will commence
+5.1 Expasy ProtParam: To determine the physiochemical properties of the candidates, the sequences were analyzed via this platform to obtain the following: 
+- **Total Number of Amino Acids** 
+- **Molecular Weight (MW)**
+- **Theoretical pI (Isoelectric Point):** The precise pH at which your protein carries a net neutral charge. This dictates exactly what chemical buffers a lab would need to purify your protein using ion-exchange chromatography.
+- **Instability Index (II):** The definitive proof of stability. We are looking for this number to drop below 40.0.
+- **Aliphatic Index:** This measures the volume occupied by aliphatic side chains (alanine, valine, isoleucine, and leucine). Higher scores indicate high thermostability, meaning the vaccine won't denature at room temperature.
+- **GRAVY (Grand Average of Hydropathicity):** A negative score mathematically proves the protein is hydrophilic and will dissolve seamlessly into human blood serum rather than repelling water.
+##### NOTE: Initial analysis produced unstable indexes for both candidates, further editing proved ineffective. The use of a Thioredoxin (Trx) stability tag was implemented.
+Thioredoxin (Trx) is a naturally occurring, highly soluble _E. coli_ protein used globally in recombinant biotechnology as a molecular chaperone.
 
