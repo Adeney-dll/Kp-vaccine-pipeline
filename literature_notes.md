@@ -151,6 +151,10 @@ Antigenicity - Probable antigen, Score: 0.5572180025793119 for MEV-1
             Probable antigen, Score: 0.6355006892820295 for MEV-2
 Allergenicity - Both non-allergens
 
+5.2 SOPMA Secondary structure prediction
+        <!--(Geourjon & Deléage, 1995)
+        Geourjon, C., & Deléage, G. (1995). SOPMA: significant improvements in protein secondary structure prediction by consensus prediction from multiple alignments. _Computer Applications in the Biosciences_, _11_(6), 681–684. https://doi.org/10.1093/bioinformatics/11.6.681-->
+
 | Parameter                        | MEV-1 [CTB] | MEV-2 [HBD-2] |
 | -------------------------------- | ----------- | ------------- |
 | Expasy Physiochemical properties | -           | +             |
