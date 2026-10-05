@@ -132,11 +132,26 @@ HBD-2 result -- Signal peptide (Sec/SPI) present (0.9997 likelihood)
 Vaccine candidates have been constructed and testing and validation will commence
 5.1 Expasy ProtParam: To determine the physiochemical properties of the candidates, the sequences were analyzed via this platform to obtain the following: 
 - **Total Number of Amino Acids** 
-- **Molecular Weight (MW)**
+- **Molecular Weight (MW)** - Provided in Dalton within the files, divide by 1000 to get kDa (kilo-Dalton)
 - **Theoretical pI (Isoelectric Point):** The precise pH at which your protein carries a net neutral charge. This dictates exactly what chemical buffers a lab would need to purify your protein using ion-exchange chromatography.
 - **Instability Index (II):** The definitive proof of stability. We are looking for this number to drop below 40.0.
 - **Aliphatic Index:** This measures the volume occupied by aliphatic side chains (alanine, valine, isoleucine, and leucine). Higher scores indicate high thermostability, meaning the vaccine won't denature at room temperature.
 - **GRAVY (Grand Average of Hydropathicity):** A negative score mathematically proves the protein is hydrophilic and will dissolve seamlessly into human blood serum rather than repelling water.
+         <!--(Gasteiger et al., 2005)
+         Gasteiger, E., Hoogland, C., Gattiker, A., Duvaud, S., Wilkins, M. R., Appel, R. D., & Bairoch, A. (2005). Protein identification and analysis tools on the ExPASY server. In _Humana Press eBooks_ (pp. 571–607). https://doi.org/10.1385/1-59259-890-0:571-->
 ##### NOTE: Initial analysis produced unstable indexes for both candidates, further editing proved ineffective. The use of a Thioredoxin (Trx) stability tag was implemented.
 Thioredoxin (Trx) is a naturally occurring, highly soluble _E. coli_ protein used globally in recombinant biotechnology as a molecular chaperone.
+         <!--(LaVallie et al., 1993)
+         LaVallie, E. R., DiBlasio, E. A., Kovacic, S., Grant, K. L., Schendel, P. F., & McCoy, J. M. (1993). A Thioredoxin Gene Fusion Expression System That Circumvents Inclusion Body Formation in the E. coli Cytoplasm. _Nature Biotechnology_, _11_(2), 187–193. https://doi.org/10.1038/nbt0293-187-->
+Note- The Trx sequence utilized is 109 aa long.
+Upon addition of the stabilizer tag, both candidates displayed suitable properties.
 
+Other factors: 
+Antigenicity - Probable antigen, Score: 0.5572180025793119 for MEV-1
+            Probable antigen, Score: 0.6355006892820295 for MEV-2
+Allergenicity - Both non-allergens
+
+| Parameter                        | MEV-1 [CTB] | MEV-2 [HBD-2] |
+| -------------------------------- | ----------- | ------------- |
+| Expasy Physiochemical properties | -           | +             |
+| Antigenicity                     | -           | +             |
