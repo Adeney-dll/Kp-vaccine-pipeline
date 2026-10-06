@@ -160,4 +160,4 @@ Allergenicity - Both non-allergens
 | Expasy Physiochemical properties | -           | +             |
 | Antigenicity                     | -           | +             |
 5.3 Tertiary structure prediction and validation
-AlphaFold and Galaxy Refine
+AlphaFold was used to determine the structure of the MEVs
