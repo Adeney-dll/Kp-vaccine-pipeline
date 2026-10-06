@@ -161,3 +161,23 @@ Allergenicity - Both non-allergens
 | Antigenicity                     | -           | +             |
 5.3 Tertiary structure prediction and validation
 AlphaFold was used to determine the structure of the MEVs
+SWISS-MODEL was used to validate the structure and energy requirements of the vaccines
+- **Ramachandran Favoured** Measures backbone twisting. A score >90% proves the amino acid chain folds naturally without impossible, artificial angles.
+    
+- **MolProbity Score** Measures overall structural resolution. A score under 2.0 means your computer-generated model has the same high quality as a real, physical crystal structure.
+    
+- **Clashscore** Measures atomic crowding. A score under 5.0 means the atoms in your separate protein blocks (Trx tag, adjuvant, epitopes) are not crashing into each other, ensuring the protein won't misfold in a lab.
+    
+- **QMEANDisCo Global** Measures structural reliability. Scores around 0.6 are standard for multiepitope vaccines, as their intentionally flexible epitope loops naturally lower this average compared to rigid proteins.
+    
+- **QMEAN Z-Score** Measures energy stability. A score between -2 and +2 proves your artificial construct is just as stable as a natural protein and won't spontaneously fall apart.
+
+| Parameter               | MEV-1       | MEV-2       |
+| ----------------------- | ----------- | ----------- |
+| Ramachandran Favoured   | 92.45%      | 91.02%      |
+| MolProbity Score        | 1.95        | 2.00        |
+| Clash Score             | 4.95        | 3.93        |
+| QMEANDisCo Global Score | 0.58 ± 0.05 | 0.53 ± 0.05 |
+| QMEAN Z-Score           | -1.96       | -1.20       |
+<!--(Waterhouse et al., 2024)
+Waterhouse, A. M., Studer, G., Robin, X., Bienert, S., Tauriello, G., & Schwede, T. (2024). The structure assessment web server: for proteins, complexes and more. _Nucleic Acids Research_, _52_(W1), W318–W323. https://doi.org/10.1093/nar/gkae270-->
