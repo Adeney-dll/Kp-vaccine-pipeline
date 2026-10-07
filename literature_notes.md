@@ -181,3 +181,18 @@ SWISS-MODEL was used to validate the structure and energy requirements of the va
 | QMEAN Z-Score           | -1.96       | -1.20       |
 <!--(Waterhouse et al., 2024)
 Waterhouse, A. M., Studer, G., Robin, X., Bienert, S., Tauriello, G., & Schwede, T. (2024). The structure assessment web server: for proteins, complexes and more. _Nucleic Acids Research_, _52_(W1), W318–W323. https://doi.org/10.1093/nar/gkae270-->
+Both constructs are viable and docking will commence
+
+### Design stage 6
+Molecular docking and validation
+6.1 Human toll-like receptor 4 crystal was obtained from the RCSB database
+    <!--(Berman, 2000)
+    Berman, H. M. (2000). The Protein Data Bank. _Nucleic Acids Research_, _28_(1), 235–242. https://doi.org/10.1093/nar/28.1.235-->
+The retrieved crystal was cleaned using pymol
+    <!-- _The PyMOL Molecular Graphics System, Version 2.0, Schrödinger, LLC._.-->
+Further cleaning was required as docking constraints were identified, the TLR-4 crystal was cleaved and a monomer chain A was utilized.
+Docking was carried out on HAWKDOCK
+     <!--(Zhang et al., 2025)
+     Zhang, X., Jiang, L., Weng, G., Shen, C., Zhang, O., Liu, M., Zhang, C., Gu, S., Wang, J., Wang, X., Du, H., Zhang, H., Zhang, K., Wang, E., & Hou, T. (2025). HawkDock version 2: an updated web server to predict and analyze the structures of protein–protein complexes. _Nucleic Acids Research_, _53_(W1), W306–W315. https://doi.org/10.1093/nar/gkaf379-->
+MEV-1 Site: https://cadd.zju.edu.cn/hawkdock/result/ID307095-1791400690859
+MEV-2 Site: https://cadd.zju.edu.cn/hawkdock/result/ID678488-1791400906185
