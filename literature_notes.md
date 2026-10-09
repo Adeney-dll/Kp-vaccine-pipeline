@@ -199,3 +199,4 @@ MEV-2 Site: https://cadd.zju.edu.cn/hawkdock/result/ID678488-1791400906185
      Results
          MEV-1 with TLR4: Docking score of -5323.90 and Binding free energy of complex: -24.05 (kcal/mol)
          MEV-2 with TLR4: Docking score of -3867.47 and Binding free energy of complex: -51.36 (kcal/mol)
+Interaction activity between the receptor and construct was mapped using Pymol and a consolidated summary table was made
