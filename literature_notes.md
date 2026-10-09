@@ -196,3 +196,6 @@ Docking was carried out on HAWKDOCK
      Zhang, X., Jiang, L., Weng, G., Shen, C., Zhang, O., Liu, M., Zhang, C., Gu, S., Wang, J., Wang, X., Du, H., Zhang, H., Zhang, K., Wang, E., & Hou, T. (2025). HawkDock version 2: an updated web server to predict and analyze the structures of protein–protein complexes. _Nucleic Acids Research_, _53_(W1), W306–W315. https://doi.org/10.1093/nar/gkaf379-->
 MEV-1 Site: https://cadd.zju.edu.cn/hawkdock/result/ID307095-1791400690859
 MEV-2 Site: https://cadd.zju.edu.cn/hawkdock/result/ID678488-1791400906185
+     Results
+         MEV-1 with TLR4: Docking score of -5323.90 and Binding free energy of complex: -24.05 (kcal/mol)
+         MEV-2 with TLR4: Docking score of -3867.47 and Binding free energy of complex: -51.36 (kcal/mol)
