@@ -200,6 +200,16 @@ Docking was carried out on HAWKDOCK
 Interaction activity between the receptor and construct was mapped using Pymol and a consolidated summary table was made
 
 6.2 Normal mode analysis
-        <!-- (López-Blanco et al., 2014)
-         López-Blanco, J. R., Aliaga, J. I., Quintana-Ortí, E. S., & Chacón, P. (2014). iMODS: internal coordinates normal mode analysis server. _Nucleic Acids Research_, _42_(W1), W271–W276. https://doi.org/10.1093/nar/gku339-->
-To perform analysis on Imod, further trimming of molecule size had to be done via pymol
+         <!--(Tiwari et al., 2014)
+         Tiwari, S. P., Fuglebakk, E., Hollup, S. M., Skjærven, L., Cragnolini, T., Grindhaug, S. H., Tekle, K. M., & Reuter, N. (2014). WEBnm@ v2.0: Web server and services for comparing protein flexibility. _BMC Bioinformatics_, _15_(1), 427. https://doi.org/10.1186/s12859-014-0427-6-->
+Analysis was carried out on WEBnma
+MEV 1 eigenvalues--------------------------------MEV 2 eigenvalues
+
+| MODE | DEFORMATION ENERGY |     | MODE | DEFORMATION ENERGY |
+| ---- | ------------------ | --- | ---- | ------------------ |
+| 7    | 0.185              |     | 7    | 0.01               |
+| 8    | 0.198              |     | 8    | 0.004              |
+| 9    | 0.831              |     | 9    | 0.024              |
+| 10   | 0.364              |     | 10   | 0.042              |
+
+6.3 In Silico Immune Simulation (C-ImmSim)
