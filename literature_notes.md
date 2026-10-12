@@ -212,4 +212,40 @@ MEV 1 eigenvalues--------------------------------MEV 2 eigenvalues
 | 9    | 0.831              |     | 9    | 0.024              |
 | 10   | 0.364              |     | 10   | 0.042              |
 
-6.3 In Silico Immune Simulation (C-ImmSim)
+6.3 Codon optimization for cloning
+37degrees Codon Optimizer
+     <!--(Zulkower & Rosser, 2020)
+     Zulkower, V., & Rosser, S. (2020). DNA Chisel, a versatile sequence optimizer. _Bioinformatics_, _36_(16), 4508–4509. https://doi.org/10.1093/bioinformatics/btaa558-->
+Codon optimization rewrites a vaccine construct's DNA so that _E. coli_ reads it with abundant tRNAs, without changing a single amino acid. By replacing rare codons with the host's preferred synonymous codons, the algorithm prevents translation from stalling, while simultaneously balancing the sequence's thermodynamic stability for physical laboratory manufacturing.
+
+- **Host Organism:** _Escherichia coli_ (the standard host for recombinant protein expression).
+- **GC Content Bounds:** Enforced between 40% and 65% to prevent transcribed mRNA from folding into restrictive secondary structures (hairpins).
+- **Restriction Site Avoidance:** Exclusion of internal cloning sites (e.g., _XhoI_, _EcoRI_, _BamHI_, _HindIII_) to ensure the construct is not unintentionally cleaved during plasmid insertion.
+- **Homopolymer Avoidance:** Restricted repetitive nucleotide runs (maximum 7 nt) to prevent RNA polymerase slippage during transcription.
+
+- **Sequence Length:** Total length in nucleotides (e.g., 960 nt).
+- **GC Content Shift:** Both the pre-optimization (e.g., 31.1%) and post-optimization (e.g., 49.9%) percentages to demonstrate the shift into the viable expression window.
+- **Codon Modifications:** The total count of synonymous codon changes made (e.g., 186/320).
+- **Optimization Strategy:** Note that the sequence was optimized using a CAI-guided open-source algorithm (DNA Chisel).
+- **The Optimized Sequence:** Save the full FASTA DNA sequence to use in Phase 7 (_in silico_ cloning).
+
+| Parameter                        | MEV-1             | MEV-2             |
+| -------------------------------- | ----------------- | ----------------- |
+| Sequence Length                  | 960 nt (bp)       | 774 nt (bp)       |
+| GC Content (After Optimization)  | 49.9%             | 52.5%             |
+| GC Content (Before Optimization) | 31.1%             | 33.3%             |
+| Codon Modifications              | 186 of 320 codons | 153 of 258 codons |
+6.4 In silico cloning
+DNA files were obtained from the optimization. To prepare them for cloning, several excluded sequences must be reintroduced [Xhol and Ndel]
+Benchling. (2026). _Benchling [Biology Software]_.
+
+_In silico_ cloning and vector construction were performed using the Benchling platform. The codon-optimized multi-epitope vaccine (MEV) constructs were computationally inserted into the multiple cloning site of the pET-28a(+) expression vector utilizing the NdeI and XhoI restriction sites. Successful integration of the recombinant plasmids was validated via virtual double restriction digestion, which confirmed the expected fragment sizes for the vector backbone (5,289 bp) and the MEV inserts (972 bp and 786 bp).
+**NOTE:** (MEV DNA inserts were modified with Ndel and Xhol additions before cloning.) 
+Finally, the Open Reading Frames (ORFs) for both constructs were verified to ensure perfect in-frame alignment with the T7 promoter and continuous translation without premature stop codons, confirming their viability for downstream expression.
+
+6.5 C-ImmSim Immune simulation
+The immunogenic profile and long-term efficacy of the multi-epitope vaccine (MEV) constructs were computationally evaluated using the C-ImmSim server. To prevent artificial skewing of the predicted immune response, the 6xHis-tag was removed from the input amino acid sequences prior to simulation. The simulation volume was set to 20, with a random seed of 12345, and the simulation steps were extended to 1,000 (representing approximately 330 days) to accurately model long-term T-cell and memory B-cell retention. To simulate a standard prophylactic multi-dose administration regimen, a three-dose injection schedule was established at time steps 1, 84, and 168 (corresponding to days 0, 28, and 56). The host HLA allele selection was maintained at the global baseline defaults (MHC class I: A0201, B0702; MHC class II: DRB1_0101).
+         <!--Rapin, N., Lund, O., & Castiglione, F. (2011). Immune system simulation online. _Bioinformatics_, _27_(14), 2013–2014. https://doi.org/10.1093/bioinformatics/btr335
+         Basak, S., Deb, D., Narsaria, U., Kar, T., Castiglione, F., Sanyal, I., Bade, P. D., & Srivastava, A. P. (2021). In silico designing of vaccine candidate against Clostridium difficile. _Scientific Reports_, _11_(1), 14215. https://doi.org/10.1038/s41598-021-93305-6-->
+
+
