@@ -11,7 +11,7 @@ Two constructs were designed: **MEV-1**, with the cholera toxin B subunit as adj
 
 ---
 ### Workflow
-![[Workflow-chart.png]]Created in  https://BioRender.com
+![Workflow-chart.png]Created in  https://BioRender.com
 
 ---
 ### Results
