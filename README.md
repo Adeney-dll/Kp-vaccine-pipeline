@@ -54,4 +54,25 @@ MHCII Passing Epitopes
 | AMLDAHANFLRSNPS | antigen      | Non-Toxin | Non-Allergen  | Immunogen      |
 | VYFDLDKYDIRSDFA | antigen      | Non-Toxin | Non-Allergen  | Immunogen      |
 
-**3. Construct Design:** 
+
+**3. Construct Design:** A 3-dimensional prediction of consesus Pal protein was obtained via AlphaFold and Epitope surface exposure was validated via Pymol. Two multi-epitope vaccine candidates were manually constructed by assembling the validated epitopes with GPGPG linkers and conjugating them via EAAAK linkers to either Cholera enterotoxin subunit B (MEV-1) or Human beta-defensin 2 (MEV-2) adjuvants, with the native signal peptides of both adjuvants cleaved. Initial physicochemical assessments via Expasy ProtParam indicated structural instability, prompting the integration of a 109-amino acid _E. coli_ Thioredoxin (Trx) chaperone tag to restore thermodynamic stability, terminating with a 6xHis-tag. Final evaluations confirmed that both complete MEV sequences exhibit optimal structural parameters, classifying them as stable, hydrophilic candidates.
+
+
+Consesus Structure with surface exposed Epitopes coloured
+<img src="results/Structures/Pymol/surface-all.png" alt="Epi-pose" width="800">
+(NOTE: See "results/Structures/Pymol" for individual surface exposure)
+
+
+Expasy data for both constructs
+
+| Physiochemical Properties               | MEV-1                  | MEV-2                  |
+| --------------------------------------- | ---------------------- | ---------------------- |
+| Total Number of Amino Acids             | 320                    | 258                    |
+| Molecular Weight (MW)                   | 34902.51 Da / 34.9 kDa | 27591.39 Da / 27.6 kDa |
+| Theoretical pI (Isoelectric Point)      | 5.88                   | 6.49                   |
+| Instability Index (II)                  | 32.29                  | 31.75                  |
+| Aliphatic Index                         | 79.72                  | 74.61                  |
+| GRAVY (Grand Average of Hydropathicity) | -0.386                 | -0.367                 |
+
+
+**4. Evaluation:** The tertiary structures of both MEV constructs were modeled using AlphaFold and rigorously validated via SWISS-MODEL, yielding highly favored Ramachandran plots (>91%) and optimal energy stability scores that confirmed their structural viability. To evaluate immune receptor interaction, molecular docking against a processed human TLR-4 monomer (chain A) was executed on the HawkDock server. Both constructs demonstrated robust binding affinities, with MEV-1 and MEV-2 producing strong binding free energies of -24.05 kcal/mol and -51.36 kcal/mol, respectively, which were subsequently mapped and visualized using PyMOL.
