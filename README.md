@@ -16,7 +16,7 @@ Two constructs were designed: **MEV-1**, with the cholera toxin B subunit as adj
 
 ---
 ### Results
-**Target and localization:** The Peptidoglycan-Associated Lipoprotein (Pal) was selected as the primary antigenic target from the outer membrane virulence factors of _Klebsiella pneumoniae_, **10** sequences ranging from 170 to 185 amino acids in length were obtained from NCBI, and a consensus sequence was derived using the MUSCLE algorithm in MEGA 12. Subcellular localization and signal peptide analyses via PSORTb and SignalP support its outer membrane placement and identified a Sec/SPII signal peptide cleavage site between positions 21 and 22. Consequently, the signal peptide was computationally truncated to yield a mature 153-amino acid sequence.
+1.**Target and localization:** The Peptidoglycan-Associated Lipoprotein (Pal) was selected as the primary antigenic target from the outer membrane virulence factors of _Klebsiella pneumoniae_, **10** sequences ranging from 170 to 185 amino acids in length were obtained from NCBI, and a consensus sequence was derived using the MUSCLE algorithm in MEGA 12. Subcellular localization and signal peptide analyses via PSORTb and SignalP support its outer membrane placement and identified a Sec/SPII signal peptide cleavage site between positions 21 and 22. Consequently, the signal peptide was computationally truncated to yield a mature 153-amino acid sequence.
 
 
 NCBI search string [ _Klebsiella pneumoniae_ Pal ATCC 13883]
@@ -31,3 +31,4 @@ PSORTb Localisation scores and SignalP output plot
 | Outer Membrane       | 10.00 |
 | Extracellular        | 0.00  |
 <img src="results/SignalP output_Consesus_plot.png" alt="SignalP Diagram" width="800">
+# ...
