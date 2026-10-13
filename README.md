@@ -34,7 +34,7 @@ PSORTb Localisation scores and SignalP output plot
 | Extracellular        | 0.00  |
 <img src="results/SignalP output_Consesus_plot.png" alt="SignalP Diagram" width="800">
 
-**2. Epitopes:** Linear B-cell, MHC-I, and MHC-II epitopes were predicted from the consesus Pal sequence utilizing the IEDB servers, employing the BepiPred v3.0, NetMHCpan EL 4.1, and NetMHCIIpan EL 4.1 algorithms across 27 human alleles. To ensure maximum immunogenic efficacy, the initial datasets comprising **3,915** MHC-I and **756** MHC-II predicted epitopes were narrowed down to 37 and 21 top binders respectively, with **4** predicted B-cell epitopes, and filtered via custom Python scripts, VaxiJen v2.1 (threshold 0.3), ToxinPred 3.0, and AlgPred 2.0. This screening yielded zero viable MHC-I candidates, but successfully isolated five MHC-II epitopes and one B-cell epitope that strictly met all required thresholds for antigenicity, non-toxicity, and non-allergenicity.
+**2. Epitopes & Filtering:** Linear B-cell, MHC-I, and MHC-II epitopes were predicted from the consesus Pal sequence utilizing the IEDB servers, employing the BepiPred v3.0, NetMHCpan EL 4.1, and NetMHCIIpan EL 4.1 algorithms across 27 human alleles. To ensure maximum immunogenic efficacy, the initial datasets comprising **3,915** MHC-I and **756** MHC-II predicted epitopes were narrowed down to 37 and 21 top binders respectively, with **4** predicted B-cell epitopes, and filtered via custom Python scripts, VaxiJen v2.1 (threshold 0.3), ToxinPred 3.0, and AlgPred 2.0. This screening yielded zero viable MHC-I candidates, but successfully isolated five MHC-II epitopes and one B-cell epitope that strictly met all required thresholds for antigenicity, non-toxicity, and non-allergenicity.
 
 
 B-Cell passing Epitope
@@ -56,11 +56,14 @@ MHCII Passing Epitopes
 
 
 **3. Construct Design:** A 3-dimensional prediction of consesus Pal protein was obtained via AlphaFold and Epitope surface exposure was validated via Pymol. Two multi-epitope vaccine candidates were manually constructed by assembling the validated epitopes with GPGPG linkers and conjugating them via EAAAK linkers to either Cholera enterotoxin subunit B (MEV-1) or Human beta-defensin 2 (MEV-2) adjuvants, with the native signal peptides of both adjuvants cleaved. Initial physicochemical assessments via Expasy ProtParam indicated structural instability, prompting the integration of a 109-amino acid _E. coli_ Thioredoxin (Trx) chaperone tag to restore thermodynamic stability, terminating with a 6xHis-tag. Final evaluations confirmed that both complete MEV sequences exhibit optimal structural parameters, classifying them as stable, hydrophilic candidates.
-
+Secondary structure profiles were first established using SOPMA, followed by 3D tertiary structure modeling via AlphaFold and validated through SWISS-MODEL, yielding favored Ramachandran plots (>91%)
 
 Consesus Structure with surface exposed Epitopes coloured
 <img src="results/Structures/Pymol/surface-all.png" alt="Epi-pose" width="800">
 (NOTE: See "results/Structures/Pymol" for individual surface exposure)
+
+
+MEV Design Chain-- [Adjuvant] - EAAAK - [MHC-II] - GPGPG - [B-cell] – HHHHHH
 
 
 Expasy data for both constructs
@@ -75,4 +78,31 @@ Expasy data for both constructs
 | GRAVY (Grand Average of Hydropathicity) | -0.386                 | -0.367                 |
 
 
-**4. Evaluation:** The tertiary structures of both MEV constructs were modeled using AlphaFold and rigorously validated via SWISS-MODEL, yielding highly favored Ramachandran plots (>91%) and optimal energy stability scores that confirmed their structural viability. To evaluate immune receptor interaction, molecular docking against a processed human TLR-4 monomer (chain A) was executed on the HawkDock server. Both constructs demonstrated robust binding affinities, with MEV-1 and MEV-2 producing strong binding free energies of -24.05 kcal/mol and -51.36 kcal/mol, respectively, which were subsequently mapped and visualized using PyMOL.
+SOMPA Secondary Structure Data MEV-1
+<img src="results/Structures/SOPMA/MEV-1.png" alt="mev" width="800">
+SOMPA Secondary Structure Data MEV-2
+<img src="results/Structures/SOPMA/MEV-2.png" alt="mev" width="800">
+AlphaFold Tertiary structure prediction for MEV-1
+<img src="results/Structures/AlphaFold/MEVs/MEV-1-Alp.png" alt="mev" width="800">
+
+AlphaFold Tertiary structure prediction for MEV-2
+<img src="results/Structures/AlphaFold/MEVs/MEV-2-Alp.png" alt="mev" width="800">
+
+SWISS-MODEL validation and energy requirements.
+
+| Parameter               | MEV-1       | MEV-2       |
+| ----------------------- | ----------- | ----------- |
+| Ramachandran Favoured   | 92.45%      | 91.02%      |
+| MolProbity Score        | 1.95        | 2.00        |
+| Clash Score             | 4.95        | 3.93        |
+| QMEANDisCo Global Score | 0.58 ± 0.05 | 0.53 ± 0.05 |
+| QMEAN Z-Score           | -1.96       | -1.20       |
+
+MEV-1 Ramachandran plot and quality comparison graph
+<img src="results/Structures/SWISS-MODEL/MEV-1-01.png" alt="mev" width="800">
+<img src="results/Structures/SWISS-MODEL/MEV-1-QC.png" alt="mev" width="800">
+MEV-2 Ramachandran plot and quality comparison graph
+<img src="results/Structures/SWISS-MODEL/MEV-2-01.png" alt="mev" width="800">
+<img src="results/Structures/SWISS-MODEL/MEV-2-QC.png" alt="mev" width="800">
+
+**4. Evaluation:** To evaluate immune receptor interaction, molecular docking against a processed human TLR-4 monomer (chain A) was executed on the HawkDock server. Both constructs demonstrated robust binding affinities, with MEV-1 and MEV-2 producing strong binding free energies of -24.05 kcal/mol and -51.36 kcal/mol, respectively, which were subsequently mapped and visualized using PyMOL.
