@@ -11,8 +11,7 @@ Two constructs were designed: **MEV-1**, with the cholera toxin B subunit as adj
 
 ---
 ### Workflow
-![[Untitled.png|700]]
-Created in  https://BioRender.com
+![[Workflow-chart.png]]Created in  https://BioRender.com
 
 ---
 ### Results
@@ -20,3 +19,13 @@ Created in  https://BioRender.com
 
 
 NCBI search string [ _Klebsiella pneumoniae_ Pal ATCC 13883]
+
+
+PSORTb Localisation scores
+
+| Cytoplasmic          | 0.00  |
+| -------------------- | ----- |
+| Cytoplasmic Membrane | 0.00  |
+| Periplasmic          | 0.00  |
+| Outer Membrane       | 10.00 |
+| Extracellular        | 0.00  |
