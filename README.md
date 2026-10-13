@@ -11,7 +11,8 @@ Two constructs were designed: **MEV-1**, with the cholera toxin B subunit as adj
 
 ---
 ### Workflow
-![[Workflow-chart.png]]
+<img src="results/Workflow-chart.png" alt="Workflow Diagram" width="800">
+
 
 ---
 ### Results
@@ -21,7 +22,7 @@ Two constructs were designed: **MEV-1**, with the cholera toxin B subunit as adj
 NCBI search string [ _Klebsiella pneumoniae_ Pal ATCC 13883]
 
 
-PSORTb Localisation scores
+PSORTb Localisation scores and SignalP output plot
 
 | Cytoplasmic          | 0.00  |
 | -------------------- | ----- |
@@ -29,3 +30,4 @@ PSORTb Localisation scores
 | Periplasmic          | 0.00  |
 | Outer Membrane       | 10.00 |
 | Extracellular        | 0.00  |
+<img src="results/SignalP output_Consesus_plot.png" alt="SignalP Diagram" width="800">
