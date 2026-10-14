@@ -120,3 +120,33 @@ MEV-2[TLR4] complex
 <img src="results/Structures/Docking/complex_docking_MEV2.png" alt="mev" width="800">
 MEV structure in purple and TLR4 fragment in cyan
 
+
+**5. Downstream analysis:** Normal mode analysis to determine the structural flexibility of the constructs was run, and both sequences were subsequently codon-optimized for _E. coli_ expression, successfully elevating their GC content into the viable optimal range without altering the amino acid sequence. The optimized genes were _in silico_ cloned into the pET-28a(+) expression vector via NdeI and XhoI restriction sites using Benchling, while extended 1,000-step multi-dose C-ImmSim simulations predicted the induction of long-lasting cellular and humoral immune memory.
+
+The correlation, deformation, displacement, and eigen plots were recorded for both:
+MEV-1
+<img src="results/Normal-mode-analysis/MEV-1/MEV-1I.jpg" alt="mev" width="800">
+
+And MEV-2
+<img src="results/Normal-mode-analysis/MEV-2/MEV-2I.jpg" alt="mev" width="800">
+Mode and deformation energies were also noted
+
+| MEV-1 | MODE | DEFORMATION ENERGY |     | MEV-2 | MODE | DEFORMATION ENERGY |
+| ----- | ---- | ------------------ | --- | ----- | ---- | ------------------ |
+|       | 7    | 0.185              |     |       | 7    | 0.01               |
+|       | 8    | 0.198              |     |       | 8    | 0.004              |
+|       | 9    | 0.831              |     |       | 9    | 0.024              |
+|       | 10   | 0.364              |     |       | 10   | 0.042              |
+
+Codon optimization was carried out for E-coli expression and DNA sequence was obtained without altering the Amino acid sequence. 
+
+|                                  | MEV-1             | MEV-2             |
+| -------------------------------- | ----------------- | ----------------- |
+| Sequence Length                  | 960 nt (bp)       | 774 nt (bp)       |
+| GC Content (Before Optimization) | 31.1%             | 33.3%             |
+| GC Content (After Optimization)  | 49.9%             | 52.5%             |
+| Codon Modifications              | 186 of 320 codons | 153 of 258 codons |
+
+cloning was achieved using the pET-28a(+) expression vector utilizing the NdeI and XhoI restriction sites.
+<img src="results/Cloning/pET-28a_MEV-1.png" alt="mev" width="800">
+<img src="results/Cloning/pET-28a_MEV-2.png" alt="mev" width="800">
