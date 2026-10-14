@@ -105,4 +105,18 @@ MEV-2 Ramachandran plot and quality comparison graph
 <img src="results/Structures/SWISS-MODEL/MEV-2-01.png" alt="mev" width="800">
 <img src="results/Structures/SWISS-MODEL/MEV-2-QC.png" alt="mev" width="800">
 
-**4. Evaluation:** To evaluate immune receptor interaction, molecular docking against a processed human TLR-4 monomer (chain A) was executed on the HawkDock server. Both constructs demonstrated robust binding affinities, with MEV-1 and MEV-2 producing strong binding free energies of -24.05 kcal/mol and -51.36 kcal/mol, respectively, which were subsequently mapped and visualized using PyMOL.
+**4. Evaluation:** To evaluate immune receptor interaction, molecular docking against a processed human TLR-4 monomer (chain A) was executed on the HawkDock server. Both constructs demonstrated suitable binding affinities, with MEV-1 and MEV-2 producing strong binding free energies of -24.05 kcal/mol and -51.36 kcal/mol, and docking scores of -5323.90 and -3867.47 respectively, which were subsequently mapped and visualized using PyMOL.
+
+Consolidated interaction table
+
+| Construct | Receptor          | Docking Score | TLR4 (Chain A) Interface Residues                                                                                                                                                     | MEV Interface Residues                                                                                                 |
+| --------- | ----------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| MEV-1     | TLR4, (PDB: 4G8A) | -5323.90      | Lys21 Phe28 Ser45 Tyr46 Phe49 Pro52 Glu68 His203 His230 Arg231 Glu260 Glu261 Tyr377 Glu399 His400 Ile424 Glu448                                                                       | Ala88 Ala89 Thr90 Glu102 Ala106 Asn107 Gln112 Pro249 Gly250 Pro251 Gly252 Glu255 Gln266 Pro269 Gly270                  |
+| MEV-2     | TLR4, (PDB: 4G8A) | -3867.47      | Arg238 Glu244 Tyr266 Leu267 Asp268 Tyr269 Tyr270 Thr293 Lys315 Lys336 Gly337 Asn339 Asn383 Gly384 Asn407 His432 Arg434 Gly454 Asn455 Ser456 Phe457 Glu459 Asn460 Gln481 Glu483 Gln484 | Met239 Ser240 Ser241 Glu242 Glu243 Gln244 Ala245 Leu247 Gln248 Gln250 Gln251 Leu252 His253 His254 His255 His256 His257 |
+
+MEV-1[TLR4] complex
+<img src="results/Structures/Docking/complex_docking_MEV1.png" alt="mev" width="800">
+MEV-2[TLR4] complex
+<img src="results/Structures/Docking/complex_docking_MEV2.png" alt="mev" width="800">
+MEV structure in purple and TLR4 fragment in cyan
+
