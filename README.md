@@ -147,6 +147,14 @@ Codon optimization was carried out for E-coli expression and DNA sequence was ob
 | GC Content (After Optimization)  | 49.9%             | 52.5%             |
 | Codon Modifications              | 186 of 320 codons | 153 of 258 codons |
 
-cloning was achieved using the pET-28a(+) expression vector utilizing the NdeI and XhoI restriction sites.
+Cloning was achieved using the pET-28a(+) expression vector utilizing the NdeI and XhoI restriction sites.
 <img src="results/Cloning/pET-28a_MEV-1.png" alt="mev" width="800">
 <img src="results/Cloning/pET-28a_MEV-2.png" alt="mev" width="800">
+
+Immune simulation was carried out on C-IMMSIM, 6 plots were obtained describing predicted immune activity following a 1000 step 3 dose interaction across a timeframe: 
+For MEV-1
+<img src="results/Immune-Simulation/MEV-1/IM-CM.png" alt="mev" width="800">
+
+For MEV-2
+<img src="results/Immune-Simulation/MEV-2/IM-CM.png" alt="mev" width="800">
+With (A) describing the Antigens and antibodies reaction, (B) relating B-cell response, (C) relating Cytokines, (D) describing cytotoxic T-cell reaction, (E) relating the TH-subset, describing both T-cell population interaction, and (F) describing helper T-cell reaction.
