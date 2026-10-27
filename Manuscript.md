@@ -1,34 +1,51 @@
-### In silico design of a multi-epitope vaccine candidate against Klebsiella pneumoniae targeting the outer membrane lipoprotein Pal
+## In silico design of a multi-epitope vaccine candidate against *Klebsiella pneumoniae* targeting the outer membrane lipoprotein Pal
 
 Fatuyi Adene Adeniyi · Computational Biology Researcher · [27 / 10 / 2026]
 
-<!-- This file holds the full methods, numbers and references. The README carries only the headline results and images. Lines in comment tags are notes to yourself and do not show on GitHub. Target length: 4 to 6 pages. -->
-Abstract
+<!-- This file holds the full methods, numbers and references. The README carries only the headline results and images. -->
 
-Background. [Why K. pneumoniae needs a vaccine: one sentence.] Approach. [Pal as target; reverse vaccinology; two constructs, one per adjuvant.] Findings. [Three or four numbers: epitopes retained (5 MHC-II, 1 B-cell, 0 MHC-I); both constructs under instability index 40; ΔG values; both predicted to raise memory responses.] Conclusion. [One cautious sentence. Computational only.]
+---
 
-1. Introduction
-<!-- Three short paragraphs. -->
-K. pneumoniae burden and antimicrobial resistance [cite 1, 2].
-Why an outer membrane target, and why Pal rather than OmpA or LppA [cite 3 and any Pal-specific work].
-Aim: design and computationally evaluate two Pal-based multi-epitope constructs.
-<!-- CLARIFY: say whether the work concerns hypervirulent or classical strains. The search string (ATCC 13883) points to the classical type strain. -->
-2. Methods
+#### Abstract
+*Klebsiella pneumoniae* remains one of world's most significant organisms, it's high pathogenicity inducing numerous diseases, such as liver abscesses, bacteremias, pneumonia, and urinary tract infections, which constitute a major threat to hospitals catering to the immunocompromised and the community. No licensed vaccine is available.
+Using a reverse-vaccinology workflow, built from free web servers and short Python filtering scripts, to design a multi-epitope vaccine against the outer membrane lipoprotein Pal. A consensus of ten Pal sequences was confirmed as an outer membrane lipoprotein (PSORTb outer membrane score 10.00; SignalP 6.0 Sec/SPII signal peptide, cleavage after residue 21). B-cell, MHC-I and MHC-II epitopes were predicted and filtered for antigenicity, toxicity and allergenicity (and immunogenicity for MHC-II). Two constructs were assembled, one with cholera toxin B subunit (MEV-1) and one with human β-defensin 2 (MEV-2) as adjuvant, each with a thioredoxin tag.
+One B-cell and five MHC-II epitopes passed all filters; none of the 37 MHC-I candidates did. Both constructs had instability indices below 40 (32.29 and 31.75) and more than 91% of residues in favoured Ramachandran regions. Docking to TLR4 gave binding free energies of −24.05 kcal/mol (MEV-1) and −51.36 kcal/mol (MEV-2). Codon optimisation raised GC content from 31.1% to 49.9% and from 33.3% to 52.5%, and both genes were cloned virtually into pET-28a(+). Immune simulation predicted a substantial rise in memory response.
+Both constructs meet the computational criteria applied here and are candidates for further testing. All results are predictions; no laboratory validation was done.
 
-Table 1. Tools, versions and settings (fill the last two columns; add the access date for each web server)
+---
 
-Step	Tool	Version / date	Settings	Ref
-Sequence retrieval	NCBI Protein	[date]	"Klebsiella pneumoniae Pal ATCC 13883"; 170–185 aa; n = 10	
-Alignment, consensus	MEGA 12 (MUSCLE)	12	defaults	[add MEGA12 and MUSCLE]
-Localisation	PSORTb	3.0.3	Gram-negative	[4]
-Signal peptide	SignalP	6.0	[organism group]	[5; also cite the SignalP 6.0 paper]
-B-cell epitopes	IEDB BepiPred	3.0	defaults	[6, Clifford 2022]
-MHC-I	NetMHCpan EL	4.1	27 alleles	[7]
-MHC-II	NetMHCIIpan EL	4.1	27 alleles	[7, 8]
-Top-binder filter	Python script	[file]	[rank or percentile cut-off]	
-Antigenicity	VaxiJen	2.1	threshold 0.3 [reason]	[9]
-Toxicity	ToxinPred	3.0	[model]	[10]
-Allergenicity	AlgPred	2.0	[model]	[11]
+#### Introduction
+_Klebsiella pneumoniae_ is a Gram-negative bacterium that causes pneumonia, urinary tract infections and bloodstream infections, mainly in hospitalised and immunocompromised patients **[1]**. Hypervirulent strains add invasive community-acquired disease **[2]**. Its virulence depends on the capsule, lipopolysaccharide, fimbriae and siderophores **[1–2]**. As treatment options narrow, prevention becomes more attractive, yet no licensed vaccine exists.
+
+Capsule and lipopolysaccharide vary widely between isolates, which makes them difficult vaccine targets. Outer membrane proteins are generally more conserved. The Pal protein is one of these: a lipoprotein anchored in the outer membrane that links it to the peptidoglycan layer. Other outer membrane proteins were assessed such as: OmpA and LppA, the Pal protein was settled on due to sparse literature on reverse vaccinology on this target **[3]**.
+
+Multi-epitope vaccines join selected B-cell and T-cell epitopes with short linkers and an adjuvant, giving a small, defined antigen that can be produced in _E. coli_. Computational pipelines allow many candidates to be screened before any laboratory work. Here such pipeline was applied to Pal, two constructs were designed that differ in adjuvant, and evaluated for stability, structure, TLR4 binding, expression design and simulated immune response. The work is computational only and does not test the vaccines experimentally.
+
+
+#### Methods
+Table 1. Tools and settings
+
+| Step               | Tool             | Version | Settings                                                  | Ref       |
+| ------------------ | ---------------- | ------- | --------------------------------------------------------- | --------- |
+| Sequence retrieval | NCBI Protein     |         | Klebsiella pneumoniae Pal ATCC 13883"; 170–185 aa; n = 10 | [4]       |
+| Alignment          | MEGA 12 (MUSCLE) | 12      | defaults                                                  | [5] [6]   |
+| Localisation       | PSORTb           | 3.0.3   | Gram-negative                                             | [7]       |
+| Signal peptide     | SignalP          | 6.0     | Sec/SPII                                                  | [8]       |
+| B-cell epitopes    | IEDB BepiPred    | 3.0     | defaults                                                  | [9]       |
+| MHC-I              | NetMHCpan EL     | 4.1     | 27 alleles                                                | [10]      |
+| MHC-II             | NetMHCIIpan EL   | 4.1     | 27 alleles                                                | [10] [11] |
+| Antigenicity       | VaxiJen          | 2.1     | threshold 0.3                                             | [12]      |
+| Toxicity           | ToxinPred        | 3.0     | defaults                                                  | [13]      |
+| Allergenicity      | AlgPred          | 2.0     | defaults                                                  | [14]      |
+|                    |                  |         |                                                           |           |
+|                    |                  |         |                                                           |           |
+|                    |                  |         |                                                           |           |
+|                    |                  |         |                                                           |           |
+
+
+
+
+
 Immunogenicity	[tool]	[version]		[12]
 3D structure	AlphaFold	3 (server)		[13]
 Physicochemical	ExPASy ProtParam			[14]
@@ -108,7 +125,38 @@ Fig.	Content	File	Status
 7	Normal modes	results/Normal-mode-analysis/	exists
 8	Plasmid maps	results/Cloning/	exists
 9	Immune simulation	results/Immune-Simulation/	exists
-References
+
+
+#### References
+[1] Abbas, R., Chakkour, M., Dine, H. Z. E., Obaseki, E. F., Obeid, S. T., Jezzini, A., Ghssein, G., & Ezzeddine, Z. (2024). General Overview of Klebsiella pneumonia: Epidemiology and the Role of Siderophores in Its Pathogenicity. Biology, 13(2), 78. https://doi.org/10.3390/biology13020078
+
+[2] Zhu, J., Wang, T., Chen, L., & Du, H. (2021). Virulence Factors in Hypervirulent Klebsiella pneumoniae. _Frontiers in Microbiology_, _12_, 642484. https://doi.org/10.3389/fmicb.2021.642484
+
+[3] Paczosa, M. K., & Mecsas, J. (2016). Klebsiella pneumoniae: Going on the Offense with a Strong Defense. _Microbiology and Molecular Biology Reviews_, _80_(3), 629–661. https://doi.org/10.1128/mmbr.00078-15
+
+[4] Sayers, E. W., Bolton, E. E., Fine, A. M., Kelly, C., Kim, S., Landrum, M., Lathrop, S., Malheiro, A., Murphy, T. D., Phan, L., Pujar, S., Trawick, B. W., Schneider, V. A., & Pruitt, K. D. (2025). Database resources of the National Center for Biotechnology Information in 2026. _Nucleic Acids Research_, _54_(D1), D20–D27. https://doi.org/10.1093/nar/gkaf1060
+
+[5] Kumar, S., Stecher, G., Suleski, M., Sanderford, M., Sharma, S., & Tamura, K. (2024). MEGA12: Molecular Evolutionary Genetic Analysis Version 12 for Adaptive and Green Computing. _Molecular Biology and Evolution_, _41_(12). https://doi.org/10.1093/molbev/msae263
+
+[6] Edgar, R. C. (2004). MUSCLE: multiple sequence alignment with high accuracy and high throughput. _Nucleic Acids Research_, _32_(5), 1792–1797. https://doi.org/10.1093/nar/gkh340
+
+[7] Yu, N. Y., Wagner, J. R., Laird, M. R., Melli, G., Rey, S., Lo, R., Dao, P., Sahinalp, S. C., Ester, M., Foster, L. J., & Brinkman, F. S. L. (2010). PSORTb 3.0: improved protein subcellular localization prediction with refined localization subcategories and predictive capabilities for all prokaryotes. _Bioinformatics_, _26_(13), 1608–1615. https://doi.org/10.1093/bioinformatics/btq249
+
+[8] Nielsen, H., Teufel, F., Brunak, S., & Von Heijne, G. (2024). SignalP: The Evolution of a Web Server. In _Methods in molecular biology_ (Vol. 2836, pp. 331–367). https://doi.org/10.1007/978-1-0716-4007-4_17
+
+[9] Yan, Z., Kim, K., Kim, H., Ha, B., Gambiez, A., Bennett, J., De Almeida Mendes, M. F., Trevizani, R., Mahita, J., Richardson, E., Marrama, D., Blazeska, N., Koşaloğlu-Yalçın, Z., Nielsen, M., Sette, A., Peters, B., & Greenbaum, J. A. (2024). Next-generation IEDB tools: a platform for epitope prediction and analysis. _Nucleic Acids Research_, _52_(W1), W526–W532. https://doi.org/10.1093/nar/gkae407
+
+[10] Reynisson, B., Alvarez, B., Paul, S., Peters, B., & Nielsen, M. (2020). NetMHCpan-4.1 and NetMHCIIpan-4.0: improved predictions of MHC antigen presentation by concurrent motif deconvolution and integration of MS MHC eluted ligand data. _Nucleic Acids Research_, _48_(W1), W449–W454. https://doi.org/10.1093/nar/gkaa379
+
+[11] Kaabinejadian, S., Barra, C., Alvarez, B., Yari, H., Hildebrand, W. H., & Nielsen, M. (2022). Accurate MHC motif deconvolution of immunopeptidomics data reveals a significant contribution of DRB3, 4 and 5 to the total DR immunopeptidome. _Frontiers in Immunology_, _13_, 835454. https://doi.org/10.3389/fimmu.2022.835454
+
+[12] Doytchinova, I. A., & Flower, D. R. (2007). VaxiJen: a server for prediction of protective antigens, tumour antigens and subunit vaccines. _BMC Bioinformatics_, _8_(1), 4. https://doi.org/10.1186/1471-2105-8-4
+
+[13] Rathore, A. S., Choudhury, S., Arora, A., Tijare, P., & Raghava, G. P. (2024). ToxinPred 3.0: An improved method for predicting the toxicity of peptides. _Computers in Biology and Medicine_, _179_, 108926. https://doi.org/10.1016/j.compbiomed.2024.108926
+
+[14] Sharma, N., Patiyal, S., Dhall, A., Pande, A., Arora, C., & Raghava, G. P. S. (2020). AlgPred 2.0: an improved method for predicting allergenic proteins and mapping of IgE epitopes. _Briefings in Bioinformatics_, _22_(4). https://doi.org/10.1093/bib/bbaa294
+
+[15] 
 <!-- Number in order of first citation, and put the matching [n] in the text. In the current README the list starts [1],[2],[3],[15] and then jumps to [4]; the text has no citation markers. Still missing: MEGA 12, MUSCLE, BepiPred 3.0 (in the notes comments, not in the README list), the SignalP 6.0 paper, CTB and HBD-2 sources, TLR4 structure paper for 4G8A, and the Benchling entry (add publisher and URL). Check each DOI before committing. -->
 
 [Paste the verified list here.]
