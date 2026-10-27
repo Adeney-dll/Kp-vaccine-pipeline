@@ -25,30 +25,23 @@ Multi-epitope vaccines join selected B-cell and T-cell epitopes with short linke
 #### Methods
 Table 1. Tools and settings
 
-| Step               | Tool             | Version | Settings                                                  | Ref       |
-| ------------------ | ---------------- | ------- | --------------------------------------------------------- | --------- |
-| Sequence retrieval | NCBI Protein     |         | Klebsiella pneumoniae Pal ATCC 13883"; 170–185 aa; n = 10 | [4]       |
-| Alignment          | MEGA 12 (MUSCLE) | 12      | defaults                                                  | [5] [6]   |
-| Localisation       | PSORTb           | 3.0.3   | Gram-negative                                             | [7]       |
-| Signal peptide     | SignalP          | 6.0     | Sec/SPII                                                  | [8]       |
-| B-cell epitopes    | IEDB BepiPred    | 3.0     | defaults                                                  | [9]       |
-| MHC-I              | NetMHCpan EL     | 4.1     | 27 alleles                                                | [10]      |
-| MHC-II             | NetMHCIIpan EL   | 4.1     | 27 alleles                                                | [10] [11] |
-| Antigenicity       | VaxiJen          | 2.1     | threshold 0.3                                             | [12]      |
-| Toxicity           | ToxinPred        | 3.0     | defaults                                                  | [13]      |
-| Allergenicity      | AlgPred          | 2.0     | defaults                                                  | [14]      |
-|                    |                  |         |                                                           |           |
-|                    |                  |         |                                                           |           |
-|                    |                  |         |                                                           |           |
-|                    |                  |         |                                                           |           |
+| Step                     | Tool             | Version | Settings                                                  | Ref       |
+| ------------------------ | ---------------- | ------- | --------------------------------------------------------- | --------- |
+| Sequence retrieval       | NCBI Protein     |         | Klebsiella pneumoniae Pal ATCC 13883"; 170–185 aa; n = 10 | [4]       |
+| Alignment                | MEGA 12 (MUSCLE) | 12      | defaults                                                  | [5] [6]   |
+| Localisation             | PSORTb           | 3.0.3   | Gram-negative                                             | [7]       |
+| Signal peptide           | SignalP          | 6.0     | Sec/SPII                                                  | [8]       |
+| B-cell epitopes          | IEDB BepiPred    | 3.0     | defaults                                                  | [9]       |
+| MHC-I                    | NetMHCpan EL     | 4.1     | 27 alleles                                                | [10]      |
+| MHC-II                   | NetMHCIIpan EL   | 4.1     | 27 alleles                                                | [10] [11] |
+| Antigenicity             | VaxiJen          | 2.1     | threshold 0.3                                             | [12]      |
+| Toxicity                 | ToxinPred        | 3.0     | defaults                                                  | [13]      |
+| Allergenicity            | AlgPred          | 2.0     | defaults                                                  | [14]      |
+| Immunogenicity           | Vaxijen          | 2.0     | defaults                                                  | [15]      |
+| 3D structure             | AlphaFold        | 3       |                                                           | [16]      |
+| Physicochemical Property | ExPASy ProtParam |         |                                                           | [17]      |
+|                          |                  |         |                                                           |           |
 
-
-
-
-
-Immunogenicity	[tool]	[version]		[12]
-3D structure	AlphaFold	3 (server)		[13]
-Physicochemical	ExPASy ProtParam			[14]
 Secondary structure	SOPMA		[window, similarity threshold]	[16]
 Structure assessment	SWISS-MODEL			[17]
 Docking	HawkDock	2	TLR4 chain A, PDB 4G8A	[18, 20]
@@ -156,7 +149,13 @@ Fig.	Content	File	Status
 
 [14] Sharma, N., Patiyal, S., Dhall, A., Pande, A., Arora, C., & Raghava, G. P. S. (2020). AlgPred 2.0: an improved method for predicting allergenic proteins and mapping of IgE epitopes. _Briefings in Bioinformatics_, _22_(4). https://doi.org/10.1093/bib/bbaa294
 
-[15] 
+[15] Dimitrov, I., Zaharieva, N., & Doytchinova, I. (2020). Bacterial immunogenicity prediction by machine learning methods. _Vaccines_, _8_(4), 709. https://doi.org/10.3390/vaccines8040709
+
+[16] Abramson, J., Adler, J., Dunger, J., Evans, R., Green, T., Pritzel, A., Ronneberger, O., Willmore, L., Ballard, A. J., Bambrick, J., Bodenstein, S. W., Evans, D. A., Hung, C., O’Neill, M., Reiman, D., Tunyasuvunakool, K., Wu, Z., Žemgulytė, A., Arvaniti, E., . . . Jumper, J. M. (2024). Accurate structure prediction of biomolecular interactions with AlphaFold 3. _Nature_, _630_(8016), 493–500. https://doi.org/10.1038/s41586-024-07487-w
+
+[17] Gasteiger, E., Hoogland, C., Gattiker, A., Duvaud, S., Wilkins, M. R., Appel, R. D., & Bairoch, A. (2005). Protein identification and analysis tools on the ExPASY server. In _Humana Press eBooks_ (pp. 571–607). https://doi.org/10.1385/1-59259-890-0:571
+
+[18] 
 <!-- Number in order of first citation, and put the matching [n] in the text. In the current README the list starts [1],[2],[3],[15] and then jumps to [4]; the text has no citation markers. Still missing: MEGA 12, MUSCLE, BepiPred 3.0 (in the notes comments, not in the README list), the SignalP 6.0 paper, CTB and HBD-2 sources, TLR4 structure paper for 4G8A, and the Benchling entry (add publisher and URL). Check each DOI before committing. -->
 
 [Paste the verified list here.]
