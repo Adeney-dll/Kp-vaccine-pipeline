@@ -40,9 +40,9 @@ Table 1. Tools and settings
 | Immunogenicity           | Vaxijen          | 2.0     | defaults                                                  | [15]      |
 | 3D structure             | AlphaFold        | 3       |                                                           | [16]      |
 | Physicochemical Property | ExPASy ProtParam |         |                                                           | [17]      |
-|                          |                  |         |                                                           |           |
+| Secondary structure      | SOPMA            |         |                                                           | [18]      |
 
-Secondary structure	SOPMA		[window, similarity threshold]	[16]
+
 Structure assessment	SWISS-MODEL			[17]
 Docking	HawkDock	2	TLR4 chain A, PDB 4G8A	[18, 20]
 Flexibility	WEBnm@	2.0		[21]
@@ -155,7 +155,9 @@ Fig.	Content	File	Status
 
 [17] Gasteiger, E., Hoogland, C., Gattiker, A., Duvaud, S., Wilkins, M. R., Appel, R. D., & Bairoch, A. (2005). Protein identification and analysis tools on the ExPASY server. In _Humana Press eBooks_ (pp. 571–607). https://doi.org/10.1385/1-59259-890-0:571
 
-[18] 
+[18] Geourjon, C., & Deléage, G. (1995). SOPMA: significant improvements in protein secondary structure prediction by consensus prediction from multiple alignments. _Computer Applications in the Biosciences_, _11_(6), 681–684. https://doi.org/10.1093/bioinformatics/11.6.681
+
+[19]
 <!-- Number in order of first citation, and put the matching [n] in the text. In the current README the list starts [1],[2],[3],[15] and then jumps to [4]; the text has no citation markers. Still missing: MEGA 12, MUSCLE, BepiPred 3.0 (in the notes comments, not in the README list), the SignalP 6.0 paper, CTB and HBD-2 sources, TLR4 structure paper for 4G8A, and the Benchling entry (add publisher and URL). Check each DOI before committing. -->
 
 [Paste the verified list here.]
