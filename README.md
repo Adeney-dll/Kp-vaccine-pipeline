@@ -176,21 +176,3 @@ Studies reviewed
 
 [15] LaVallie, E. R., DiBlasio, E. A., Kovacic, S., Grant, K. L., Schendel, P. F., & McCoy, J. M. (1993). A Thioredoxin Gene Fusion Expression System That Circumvents Inclusion Body Formation in the E. coli Cytoplasm. _Nature Biotechnology_, _11_(2), 187–193. https://doi.org/10.1038/nbt0293-187
 
-
-[17] Waterhouse, A. M., Studer, G., Robin, X., Bienert, S., Tauriello, G., & Schwede, T. (2024). The structure assessment web server: for proteins, complexes and more. _Nucleic Acids Research_, _52_(W1), W318–W323. https://doi.org/10.1093/nar/gkae270
-
-[18] Berman, H. M. (2000). The Protein Data Bank. _Nucleic Acids Research_, _28_(1), 235–242. https://doi.org/10.1093/nar/28.1.235
-
-[19] The PyMOL Molecular Graphics System, Version 2.0, Schrödinger, LLC
-
-[20]  Zhang, X., Jiang, L., Weng, G., Shen, C., Zhang, O., Liu, M., Zhang, C., Gu, S., Wang, J., Wang, X., Du, H., Zhang, H., Zhang, K., Wang, E., & Hou, T. (2025). HawkDock version 2: an updated web server to predict and analyze the structures of protein–protein complexes. _Nucleic Acids Research_, _53_(W1), W306–W315. https://doi.org/10.1093/nar/gkaf379
-
-[21] Tiwari, S. P., Fuglebakk, E., Hollup, S. M., Skjærven, L., Cragnolini, T., Grindhaug, S. H., Tekle, K. M., & Reuter, N. (2014). WEBnm@ v2.0: Web server and services for comparing protein flexibility. _BMC Bioinformatics_, _15_(1), 427. https://doi.org/10.1186/s12859-014-0427-6
-
-[22] Zulkower, V., & Rosser, S. (2020). DNA Chisel, a versatile sequence optimizer. _Bioinformatics_, _36_(16), 4508–4509. https://doi.org/10.1093/bioinformatics/btaa558
-
-[23] Benchling. (2026).
-
-[24] Rapin, N., Lund, O., & Castiglione, F. (2011). Immune system simulation online. _Bioinformatics_, _27_(14), 2013–2014. https://doi.org/10.1093/bioinformatics/btr335
-
-[25] Basak, S., Deb, D., Narsaria, U., Kar, T., Castiglione, F., Sanyal, I., Bade, P. D., & Srivastava, A. P. (2021). In silico designing of vaccine candidate against Clostridium difficile. _Scientific Reports_, _11_(1), 14215. https://doi.org/10.1038/s41598-021-93305-6

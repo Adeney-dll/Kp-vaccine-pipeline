@@ -25,31 +25,30 @@ Multi-epitope vaccines join selected B-cell and T-cell epitopes with short linke
 #### Methods
 Table 1. Tools and settings
 
-| Step                     | Tool             | Version | Settings                                                  | Ref       |
-| ------------------------ | ---------------- | ------- | --------------------------------------------------------- | --------- |
-| Sequence retrieval       | NCBI Protein     |         | Klebsiella pneumoniae Pal ATCC 13883"; 170–185 aa; n = 10 | [4]       |
-| Alignment                | MEGA 12 (MUSCLE) | 12      | defaults                                                  | [5] [6]   |
-| Localisation             | PSORTb           | 3.0.3   | Gram-negative                                             | [7]       |
-| Signal peptide           | SignalP          | 6.0     | Sec/SPII                                                  | [8]       |
-| B-cell epitopes          | IEDB BepiPred    | 3.0     | defaults                                                  | [9]       |
-| MHC-I                    | NetMHCpan EL     | 4.1     | 27 alleles                                                | [10]      |
-| MHC-II                   | NetMHCIIpan EL   | 4.1     | 27 alleles                                                | [10] [11] |
-| Antigenicity             | VaxiJen          | 2.1     | threshold 0.3                                             | [12]      |
-| Toxicity                 | ToxinPred        | 3.0     | defaults                                                  | [13]      |
-| Allergenicity            | AlgPred          | 2.0     | defaults                                                  | [14]      |
-| Immunogenicity           | Vaxijen          | 2.0     | defaults                                                  | [15]      |
-| 3D structure             | AlphaFold        | 3       |                                                           | [16]      |
-| Physicochemical Property | ExPASy ProtParam |         |                                                           | [17]      |
-| Secondary structure      | SOPMA            |         |                                                           | [18]      |
+| Step                     | Tool             | Version | Settings                                                      | Ref       |
+| ------------------------ | ---------------- | ------- | ------------------------------------------------------------- | --------- |
+| Sequence retrieval       | NCBI Protein     |         | Klebsiella pneumoniae Pal ATCC 13883"; 170–185 aa; n = 10     | [4]       |
+| Alignment                | MEGA 12 (MUSCLE) | 12      | defaults                                                      | [5] [6]   |
+| Localisation             | PSORTb           | 3.0.3   | Gram-negative                                                 | [7]       |
+| Signal peptide           | SignalP          | 6.0     | Sec/SPII                                                      | [8]       |
+| B-cell epitopes          | IEDB BepiPred    | 3.0     | defaults                                                      | [9]       |
+| MHC-I                    | NetMHCpan EL     | 4.1     | 27 alleles                                                    | [10]      |
+| MHC-II                   | NetMHCIIpan EL   | 4.1     | 27 alleles                                                    | [10] [11] |
+| Antigenicity             | VaxiJen          | 2.1     | threshold 0.3                                                 | [12]      |
+| Toxicity                 | ToxinPred        | 3.0     | defaults                                                      | [13]      |
+| Allergenicity            | AlgPred          | 2.0     | defaults                                                      | [14]      |
+| Immunogenicity           | Vaxijen          | 2.0     | defaults                                                      | [15]      |
+| 3D structure             | AlphaFold        | 3       |                                                               | [16]      |
+| Physicochemical Property | ExPASy ProtParam |         |                                                               | [17]      |
+| Secondary structure      | SOPMA            |         |                                                               | [18]      |
+| Structure assessment     | SWISS-MODEL      |         |                                                               | [19]      |
+| Docking                  | HawkDock         | 2       | TLR4 chain A, PDB 4G8A                                        | [20] [21] |
+| Flexibility              | WEBnm@           | 2.0     |                                                               | [22]      |
+| Codon optimisation       | DNA Chisel       |         | E. coli; GC 40–65%; max homopolymer 7 nt                      | [23]      |
+| In silico cloning        | Benchling        |         | pET-28a(+), NdeI/XhoI                                         | [24]      |
+| Immune simulation        | C-ImmSim         |         | volume 20; seed 12345; 1,000 steps; doses at steps 1, 84, 168 | [25] [26] |
 
-
-Structure assessment	SWISS-MODEL			[17]
-Docking	HawkDock	2	TLR4 chain A, PDB 4G8A	[18, 20]
-Flexibility	WEBnm@	2.0		[21]
-Codon optimisation	[37° tool or DNA Chisel]		E. coli; GC 40–65%; max homopolymer 7 nt	[22]
-In silico cloning	Benchling		pET-28a(+), NdeI/XhoI	[23]
-Immune simulation	C-ImmSim		volume 20; seed 12345; 1,000 steps; doses at steps 1, 84, 168	[24, 25]
-2.1 Construct assembly
+##### Construct assembly
 <!-- NEW FIGURE: construct schematic (Fig. 3) with residue ranges. -->
 Epitope order, linkers (EAAAK between adjuvant and epitopes, GPGPG between epitopes), His-tag.
 Adjuvant sequences (accession numbers) with signal peptides removed (CTB: residues 1–21; HBD-2: 1–23).
@@ -157,7 +156,20 @@ Fig.	Content	File	Status
 
 [18] Geourjon, C., & Deléage, G. (1995). SOPMA: significant improvements in protein secondary structure prediction by consensus prediction from multiple alignments. _Computer Applications in the Biosciences_, _11_(6), 681–684. https://doi.org/10.1093/bioinformatics/11.6.681
 
-[19]
-<!-- Number in order of first citation, and put the matching [n] in the text. In the current README the list starts [1],[2],[3],[15] and then jumps to [4]; the text has no citation markers. Still missing: MEGA 12, MUSCLE, BepiPred 3.0 (in the notes comments, not in the README list), the SignalP 6.0 paper, CTB and HBD-2 sources, TLR4 structure paper for 4G8A, and the Benchling entry (add publisher and URL). Check each DOI before committing. -->
+[19] Waterhouse, A. M., Studer, G., Robin, X., Bienert, S., Tauriello, G., & Schwede, T. (2024). The structure assessment web server: for proteins, complexes and more. _Nucleic Acids Research_, _52_(W1), W318–W323. https://doi.org/10.1093/nar/gkae270
 
-[Paste the verified list here.]
+[20] Berman, H. M. (2000). The Protein Data Bank. _Nucleic Acids Research_, _28_(1), 235–242. https://doi.org/10.1093/nar/28.1.235
+
+[21] Zhang, X., Jiang, L., Weng, G., Shen, C., Zhang, O., Liu, M., Zhang, C., Gu, S., Wang, J., Wang, X., Du, H., Zhang, H., Zhang, K., Wang, E., & Hou, T. (2025). HawkDock version 2: an updated web server to predict and analyze the structures of protein–protein complexes. _Nucleic Acids Research_, _53_(W1), W306–W315. https://doi.org/10.1093/nar/gkaf379
+
+[22] Tiwari, S. P., Fuglebakk, E., Hollup, S. M., Skjærven, L., Cragnolini, T., Grindhaug, S. H., Tekle, K. M., & Reuter, N. (2014). WEBnm@ v2.0: Web server and services for comparing protein flexibility. _BMC Bioinformatics_, _15_(1), 427. https://doi.org/10.1186/s12859-014-0427-6
+
+[23] Zulkower, V., & Rosser, S. (2020). DNA Chisel, a versatile sequence optimizer. _Bioinformatics_, _36_(16), 4508–4509. https://doi.org/10.1093/bioinformatics/btaa558
+
+[24] Benchling. (2026).
+
+[25] Rapin, N., Lund, O., & Castiglione, F. (2011). Immune system simulation online. _Bioinformatics_, _27_(14), 2013–2014. https://doi.org/10.1093/bioinformatics/btr335
+
+[26] Basak, S., Deb, D., Narsaria, U., Kar, T., Castiglione, F., Sanyal, I., Bade, P. D., & Srivastava, A. P. (2021). In silico designing of vaccine candidate against Clostridium difficile. _Scientific Reports_, _11_(1), 14215. https://doi.org/10.1038/s41598-021-93305-6
+
+
