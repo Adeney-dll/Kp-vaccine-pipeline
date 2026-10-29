@@ -170,9 +170,4 @@ With (A) describing the Antigens and antibodies reaction, (B) relating B-cell re
 - _In silico_ immune simulations simplify complex biological microenvironments and may not fully capture the variability of a natural human immune response.
 
 
-### References
-Studies reviewed
-
-
-[15] LaVallie, E. R., DiBlasio, E. A., Kovacic, S., Grant, K. L., Schendel, P. F., & McCoy, J. M. (1993). A Thioredoxin Gene Fusion Expression System That Circumvents Inclusion Body Formation in the E. coli Cytoplasm. _Nature Biotechnology_, _11_(2), 187–193. https://doi.org/10.1038/nbt0293-187
 

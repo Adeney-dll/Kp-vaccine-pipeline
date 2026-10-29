@@ -48,57 +48,135 @@ Table 1. Tools and settings
 | In silico cloning        | Benchling        |         | pET-28a(+), NdeI/XhoI                                         | [24]      |
 | Immune simulation        | C-ImmSim         |         | volume 20; seed 12345; 1,000 steps; doses at steps 1, 84, 168 | [25] [26] |
 
-##### Construct assembly
-<!-- NEW FIGURE: construct schematic (Fig. 3) with residue ranges. -->
-Epitope order, linkers (EAAAK between adjuvant and epitopes, GPGPG between epitopes), His-tag.
-Adjuvant sequences (accession numbers) with signal peptides removed (CTB: residues 1–21; HBD-2: 1–23).
-Thioredoxin tag (109 aa): position in the construct, reason for adding it, and whether it stays in the final candidate [15].
-Whether the 6xHis-tag was removed for the C-ImmSim input, and whether Trx was kept.
-2.2 Acceptance criteria
-<!-- One short table of the thresholds you used, with a source for each. This lets the Results pass/fail table stand alone. -->
-Metric	Threshold	Source
-Instability index	< 40	[ref]
-Ramachandran favoured	> 90%	[ref]
-MolProbity	< 2.0	[ref]
-Clashscore	< 5.0	[ref]
-QMEANDisCo global	[about 0.6]	[ref]
-QMEAN Z-score	between −2 and +2	[ref]
-<!-- The notes describe these metrics with words like "proves" and "same quality as a crystal structure". Use "is consistent with" instead. -->
-3. Results
-3.1 Target selection and mature sequence
-<!-- Fig. 2: MEGA alignment; SignalP plot. Short text: 10 sequences, 174 aa consensus, outer membrane score 10.00, signal peptide cleavage 21/22, mature 153 aa. -->
-3.2 Epitope prediction and filtering
-<!-- Fig. 4: funnel chart (new). Table 2: the six passing epitopes. -->
-Counts at each step, per class.
-Which criterion removed the MHC-I candidates.
-Position of each retained epitope on the mature sequence, and the overlap noted in the notes (mhcii-3 lies inside the B-cell epitope; mhcii-1 is partly covered by mhcii-4 and mhcii-5). Say how the overlap was handled in the construct.
-3.3 Construct properties
-<!-- Table 3: ProtParam (length, MW, pI, instability, aliphatic, GRAVY) for both constructs, before and after adding Trx. Showing the pre-Trx values is the clearest way to justify the tag. The raw values are not in the current README. --> <!-- Fig. 5: AlphaFold models with pLDDT colouring. Table 4: SOPMA percentages. -->
-3.4 Structural validation
-<!-- Table 5: your SWISS-MODEL table, with a pass/borderline column against Section 2.2. Borderline items at present: MEV-2 MolProbity 2.00; MEV-1 clashscore 4.95; QMEAN Z for MEV-1 (−1.96); QMEANDisCo 0.58 and 0.53 against a reference near 0.6. -->
-3.5 Docking with TLR4
-<!-- Fig. 6: complexes. Table 6: docking score and ΔG; residue table in an appendix or <details> block. -->
-Report the two metrics separately and say which one supports the conclusion.
-State which parts of each construct contact the receptor (adjuvant, epitope, linker or tag).
-3.6 Flexibility, codon optimisation and cloning
-<!-- Fig. 7: normal mode plots. Table 7: codon optimisation (include 972 and 786 bp inserts and the 5,289 bp backbone). Fig. 8: plasmid maps. -->
-One sentence interpreting the normal mode values.
-Digest and ORF checks: fragment sizes, in-frame with T7 promoter, no premature stop.
-3.7 Simulated immune response
-<!-- Fig. 9: C-ImmSim panels A to F for each construct (the README shows one combined image per construct). -->
-What differed between MEV-1 and MEV-2 in antibody titre, B-cell memory, T-helper and cytotoxic T-cell counts, and cytokines.
-4. Discussion
+##### Target selection and sequence retrieval
+
+Three outer membrane proteins (OmpA, LppA and Pal) were shortlisted from published work on _K. pneumoniae_ [1–3]. Pal was selected based on sparse findings on its use in reverse vaccinology. Pal protein sequences were retrieved from the NCBI Protein database [4] on [4/09/2026] using the query “Klebsiella pneumoniae Pal ATCC 13883”, restricted to 170–185 amino acids, and ten sequences were kept (accessions in `data/raw_sequences`).
+
+
+##### Consensus sequence, localisation and signal peptide
+
+The ten sequences were aligned with MUSCLE in MEGA12 [5-6] using default settings, and a consensus was derived. Subcellular localisation was predicted with PSORTb [7], and signal peptides with SignalP 6.0 **[Sec/SPII]** [8]. The signal peptide was removed to give the mature sequence used for epitope prediction.
+
+
+##### Epitope prediction
+
+Linear B-cell epitopes were predicted with BepiPred 3.0 [9]. MHC-I and MHC-II binding peptides were predicted with NetMHCpan EL 4.1 [10] and NetMHCIIpan EL 4.1 [10-11] against a panel of 27 human alleles provided on the platform, using peptide lengths of **[8–11 / 15]**.
+
+
+##### Epitope filtering
+
+Epitopes shorter than six residues were discarded. Top binders were selected by **[rank / percentile cut-off]** with a Python script (`scripts/filter_scripts`). Retained epitopes were screened for antigenicity with VaxiJen 2.1 at a threshold of **[0.3]** [12], toxicity with ToxinPred 3.0 [13], and allergenicity with AlgPred 2.0 [14]. MHC-II epitopes were also screened for immunogenicity with Vaxijen 2.0 [15]. Epitopes had to pass all criteria to be kept.
+
+
+##### Construct design
+
+Retained epitopes were joined with GPGPG linkers, and the epitope block was joined to the adjuvant by an EAAAK linker. Cholera toxin B subunit (MEV-1) or human β-defensin 2 (MEV-2) (accessions in `data/raw_sequences/adjuvants`). were used as adjuvants, with signal peptides removed. Both constructs were unstable at first (instability index **[>40]**), so a 109-residue thioredoxin tag [27] was added at the N-terminus, and a 6xHis-tag was placed at the C-terminus. Overlapping epitopes were handled by merging.
+
+
+##### Physicochemical properties, structure prediction and validation
+
+Properties were calculated with ExPASy ProtParam [17]. Secondary structure was predicted with SOPMA [18] and tertiary structure with AlphaFold**3** [16]. Models were assessed in SWISS-MODEL [19] by Ramachandran favoured percentage, MolProbity score, clashscore and QMEAN / QMEANDisCo.
+
+
+##### Molecular docking
+
+Each construct was docked to human TLR4 (PDB 4G8A, chain A) using HawkDock [20-21]. Binding free energy was estimated by MM/GBSA, and interface residues were listed from the top-ranked model.
+
+
+##### Flexibility analysis
+
+Normal mode analysis was run in WEBnm@ [22] on the top model of each construct, and deformation energy and fluctuation plots were recorded.
+
+##### Codon optimisation and in silico cloning
+
+The back-translated sequences were codon-optimised for _E. coli_ K-12 with DNA Chisel [23], keeping GC content between 40% and 65% and avoiding homopolymer runs longer than 7 nt and sites for **[_XhoI_, _EcoRI_, _BamHI_, _HindIII_]**. NdeI and XhoI sites were added at the ends, and the inserts were cloned into pET-28a(+) in Benchling [24]. Insert length, GC content and digest fragments were recorded.
+
+##### Immune simulation
+
+Immune responses were simulated with C-ImmSim [25=26] using a volume of 20, random seed 12345, and 1,000 steps, with three doses at steps 1, 84 and 168 (days 0, 28 and 56). Default HLA alleles (HLA-A_02:01, HLA-B_07:02, HLA-DRB1*01:01) were used. The input sequence was *with Trx and His-tag*.
+
+
+#### Results
+##### Target sequence and mature protein
+
+Ten Pal sequences (170–185 aa) gave a 174-residue consensus (Fig. 3A). PSORTb assigned it to the outer membrane with a score of 10.00. SignalP 6.0 predicted a lipoprotein (Sec/SPII) signal peptide with cleavage between residues 21 and 22 (probability **[0.993814]**; Fig. 3B), leaving a 153-residue mature sequence.
+<img src="results/raw_images/MEGA_ 01.png" alt="MEGA" width="800">
+Figure 3A: MEGA Alignment screen with the top consensus sequence being highlighted
+
+Table 2: PSORTb Localisation scores
+
+| Cytoplasmic          | 0.00  |
+| -------------------- | ----- |
+| Cytoplasmic Membrane | 0.00  |
+| Periplasmic          | 0.00  |
+| Outer Membrane       | 10.00 |
+| Extracellular        | 0.00  |
+
+<img src="results/SignalP output_Consesus_plot.png" alt="MEGA" width="800">
+Figure 3B: SignalP plot showing signal peptide location along the protein
+
+
+##### Epitope prediction and filtering
+
+BepiPred 3.0 predicted **[4]** B-cell epitopes, and the two NetMHC tools returned **[3915]** MHC-I and 756 MHC-II top binders. After filtering, one B-cell epitope, five MHC-II epitopes and no MHC-I epitopes remained (Table 3a-b).
+
+Table 3A:  Passing B-cell epitope
+
+| Peptide                                    | Antigenicity      | Toxicity  | Allergenicity         |
+| ------------------------------------------ | ----------------- | --------- | --------------------- |
+| NKNASNDQSGEGMLGAGTGMDANGNGGNMSSEEQARLQMQQL | Probable antigen. | Non-Toxin | Probable Non-Allergen |
+
+
+Table 3B: Passing MHC-II epitopes
+
+| Peptide         | Antigenicity | Toxicity  | Allergenicity | Immunogenicity |
+| --------------- | ------------ | --------- | ------------- | -------------- |
+| DKYDIRSDFAAMLDA | antigen      | Non-Toxin | Non-Allergen  | Immunogen      |
+| LGERRANAVKMYLQG | antigen      | Non-Toxin | Non-Allergen  | Immunogen      |
+| NGNGGNMSSEEQARL | antigen      | Non-Toxin | Non-Allergen  | Immunogen      |
+| AMLDAHANFLRSNPS | antigen      | Non-Toxin | Non-Allergen  | Immunogen      |
+| VYFDLDKYDIRSDFA | antigen      | Non-Toxin | Non-Allergen  | Immunogen      |
+
+
+##### Construct properties
+
+MEV-1 (320 residues, **[34.9]** kDa) and MEV-2 (258 residues, **[27.6]** kDa) had instability indices of 32.29 and 31.75 after addition of the Trx tag, below the threshold of 40. VaxiJen antigenicity scores were 0.557 and 0.636, and both were predicted non-toxic and non-allergenic. SOPMA predicted **[x%]** helix, **[x%]** sheet and **[x%]** coil for MEV-1 and **[x%, x%, x%]** for MEV-2 (Table 4). AlphaFold models are shown in Fig. 5 **[pLDDT / pTM values]**.
+
+**How:** Table 3 should hold length, MW, pI, instability, aliphatic index and GRAVY, before and after Trx.
+
+#### 3.4 Structural validation
+
+> Ramachandran favoured values were 92.45% (MEV-1) and 91.02% (MEV-2), both above 90%. MolProbity scores were 1.95 and 2.00 and clashscores 4.95 and 3.93. QMEANDisCo global scores were 0.58 and 0.53 and the QMEAN Z-score for MEV-1 was −1.96 (Table 5).
+
+**How:** use a pass / borderline column. Say plainly that MEV-2’s MolProbity sits at its cut-off, MEV-1’s clashscore is just under 5.0, and the QMEAN values are near the edge of their reference ranges, then add one sentence saying the models are of acceptable quality for a computational design.
+
+#### 3.5 Docking with TLR4
+
+> MEV-1 and MEV-2 formed complexes with TLR4 (Fig. 6) with binding free energies of −24.05 and −51.36 kcal/mol (Table 6). **[Interface summary: which domains make the contact, e.g. adjuvant, epitope, linker or tag.]**
+
+**How:** report docking score and ΔG separately (MEV-1 scores better on one, MEV-2 on the other), and say which supports the choice of lead. If the contact residues fall in the linker or His-tag, say so here.
+
+#### 3.6 Flexibility, codon optimisation and cloning
+
+> Normal mode analysis gave **[eigenvalue / deformation energy range]** for MEV-1 and **[range]** for MEV-2 (Fig. 7), indicating **[one-sentence reading]**. Codon optimisation raised GC content from 31.1% to 49.9% (MEV-1) and from 33.3% to 52.5% (MEV-2). Inserts of 972 and 786 bp (after adding NdeI and XhoI) were cloned into the 5,289-bp pET-28a(+) backbone (Fig. 8, Table 7); **[digest fragment sizes]**.
+
+#### 3.7 Simulated immune response
+
+> Across three doses, C-ImmSim predicted **[antibody titres: IgM / IgG levels and peak day]**, **[memory B-cell and T-helper trends]**, **[cytotoxic T-cell response]**, and **[cytokine levels]** for both constructs (Fig. 9). **[Which construct gave the higher response, if any.]**
+
+**How:** name the panels you cite (A to F). Keep it descriptive. Do not call the response “long-lasting protection”; say “predicted memory responses over the simulated period”.
+3. Discussion
 Which construct is the better lead, and why (use the pass/borderline table).
 What the Trx tag does to the design: stability gain versus a large non-epitope component.
 How the findings compare with published in silico Klebsiella vaccine designs [add two or three references].
 Next steps: BLASTp of the epitopes against the human proteome, conservation across more K. pneumoniae genomes, population coverage, molecular dynamics, expression test.
 <!-- Reviewers of this kind of study usually ask for the human-proteome check and conservation analysis; mention them even if not done. -->
-5. Limitations
+4. Limitations
 Computational only; no expression, safety or immunogenicity data.
 Prediction tools depend on their training data; several score thresholds are conventions, not proofs.
 Docking used a TLR4 monomer without MD-2; no reference docking for comparison.
 C-ImmSim used default HLA alleles and a generic host.
-6. Conclusion
+5. Conclusion
 
 [Two sentences, no new claims.]
 
@@ -171,5 +249,7 @@ Fig.	Content	File	Status
 [25] Rapin, N., Lund, O., & Castiglione, F. (2011). Immune system simulation online. _Bioinformatics_, _27_(14), 2013–2014. https://doi.org/10.1093/bioinformatics/btr335
 
 [26] Basak, S., Deb, D., Narsaria, U., Kar, T., Castiglione, F., Sanyal, I., Bade, P. D., & Srivastava, A. P. (2021). In silico designing of vaccine candidate against Clostridium difficile. _Scientific Reports_, _11_(1), 14215. https://doi.org/10.1038/s41598-021-93305-6
+
+[27] LaVallie, E. R., DiBlasio, E. A., Kovacic, S., Grant, K. L., Schendel, P. F., & McCoy, J. M. (1993). A Thioredoxin Gene Fusion Expression System That Circumvents Inclusion Body Formation in the E. coli Cytoplasm. _Nature Biotechnology_, _11_(2), 187–193. https://doi.org/10.1038/nbt0293-187
 
 
