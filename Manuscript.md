@@ -100,7 +100,9 @@ Immune responses were simulated with C-ImmSim [25=26] using a volume of 20, rand
 ##### Target sequence and mature protein
 
 Ten Pal sequences (170–185 aa) gave a 174-residue consensus (Fig. 3A). PSORTb assigned it to the outer membrane with a score of 10.00. SignalP 6.0 predicted a lipoprotein (Sec/SPII) signal peptide with cleavage between residues 21 and 22 (probability **[0.993814]**; Fig. 3B), leaving a 153-residue mature sequence.
+
 <img src="results/raw_images/MEGA_ 01.png" alt="MEGA" width="800">
+
 Figure 3A: MEGA Alignment screen with the top consensus sequence being highlighted
 
 Table 2: PSORTb Localisation scores
@@ -140,19 +142,45 @@ Table 3B: Passing MHC-II epitopes
 
 ##### Construct properties
 
-MEV-1 (320 residues, **[34.9]** kDa) and MEV-2 (258 residues, **[27.6]** kDa) had instability indices of 32.29 and 31.75 after addition of the Trx tag, below the threshold of 40. VaxiJen antigenicity scores were 0.557 and 0.636, and both were predicted non-toxic and non-allergenic. SOPMA predicted **[x%]** helix, **[x%]** sheet and **[x%]** coil for MEV-1 and **[x%, x%, x%]** for MEV-2 (Table 4). AlphaFold models are shown in Fig. 5 **[pLDDT / pTM values]**.
+MEV-1 (320 residues, **[34.9]** kDa) and MEV-2 (258 residues, **[27.6]** kDa) had instability indices of 32.29 and 31.75 after addition of the Trx tag, below the threshold of 40. VaxiJen antigenicity scores were 0.557 and 0.636, and both were predicted non-toxic and non-allergenic. SOPMA predicted **[57.19%]** helix, **[8.44%]** extended strand and **[29.06%]** coil for MEV-1 and **[45.74%, 10.08%, 36.78%]** for MEV-2. AlphaFold models are shown in Fig. 5(a-b).
 
-**How:** Table 3 should hold length, MW, pI, instability, aliphatic index and GRAVY, before and after Trx.
+Table 4: Construct physiochemical properties
 
-#### 3.4 Structural validation
+| Physiochemical Properties               | MEV-1                  | MEV-2                  |
+| --------------------------------------- | ---------------------- | ---------------------- |
+| Total Number of Amino Acids             | 320                    | 258                    |
+| Molecular Weight (MW)                   | 34902.51 Da / 34.9 kDa | 27591.39 Da / 27.6 kDa |
+| Theoretical pI (Isoelectric Point)      | 5.88                   | 6.49                   |
+| Instability Index (II)                  | 32.29                  | 31.75                  |
+| Aliphatic Index                         | 79.72                  | 74.61                  |
+| GRAVY (Grand Average of Hydropathicity) | -0.386                 | -0.367                 |
 
-> Ramachandran favoured values were 92.45% (MEV-1) and 91.02% (MEV-2), both above 90%. MolProbity scores were 1.95 and 2.00 and clashscores 4.95 and 3.93. QMEANDisCo global scores were 0.58 and 0.53 and the QMEAN Z-score for MEV-1 was −1.96 (Table 5).
+<img src="results/Structures/AlphaFold/MEVs/MEV-1-Alp.png" alt="mev" width="600">
 
-**How:** use a pass / borderline column. Say plainly that MEV-2’s MolProbity sits at its cut-off, MEV-1’s clashscore is just under 5.0, and the QMEAN values are near the edge of their reference ranges, then add one sentence saying the models are of acceptable quality for a computational design.
+Figure 5a: AlphaFold Tertiary structure prediction for MEV-1
 
-#### 3.5 Docking with TLR4
+<img src="results/Structures/AlphaFold/MEVs/MEV-2-Alp.png" alt="mev" width="600">
 
-> MEV-1 and MEV-2 formed complexes with TLR4 (Fig. 6) with binding free energies of −24.05 and −51.36 kcal/mol (Table 6). **[Interface summary: which domains make the contact, e.g. adjuvant, epitope, linker or tag.]**
+Figure 5b: AlphaFold Tertiary structure prediction for MEV-2
+
+
+##### Structural validation
+
+Ramachandran favoured values were 92.45% (MEV-1) and 91.02% (MEV-2), both above 90%. MolProbity scores were 1.95 and 2.00 and clashscores 4.95 and 3.93. QMEANDisCo global scores were 0.58 and 0.53 and the QMEAN Z-score for MEV-1 was −1.96 (Table 5).
+
+Table 5: MEV structural validation
+
+| Parameter               | MEV-1       | MEV-2       |
+| ----------------------- | ----------- | ----------- |
+| Ramachandran Favoured   | 92.45%      | 91.02%      |
+| MolProbity Score        | 1.95        | 2.00        |
+| Clash Score             | 4.95        | 3.93        |
+| QMEANDisCo Global Score | 0.58 ± 0.05 | 0.53 ± 0.05 |
+| QMEAN Z-Score           | -1.96       | -1.20       |
+
+##### Docking with TLR4
+
+MEV-1 and MEV-2 formed complexes with TLR4 (Fig. 6) with binding free energies of −24.05 and −51.36 kcal/mol (Table 6).
 
 **How:** report docking score and ΔG separately (MEV-1 scores better on one, MEV-2 on the other), and say which supports the choice of lead. If the contact residues fall in the linker or His-tag, say so here.
 
